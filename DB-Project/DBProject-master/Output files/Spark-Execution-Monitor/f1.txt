@@ -1,0 +1,3 @@
+== Parsed Logical Plan ==
+'Project [*]
++- 'UnresolvedRelation `A`

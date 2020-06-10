@@ -1,0 +1,2 @@
+== Physical Plan ==
+*Scan json [Height#0L,Name#1,weight#2L] Format: JSON, InputPaths: file:/C:/Users/Administrator/Desktop/Project/DB-Project/DBProject-master/Data/student_details.json, PushedFilters: [], ReadSchema: struct<Height:bigint,Name:string,weight:bigint>

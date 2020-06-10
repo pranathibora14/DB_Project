@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1 align="center">Welcome to SparkSQL Query Execution!</h1>
+
+<!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
+<div style="text-align: center;"   class="form-group">
+<form action="#" th:action="@{/greeting}" th:object="${greeting}" method="post">
+    <p>Query: <input type="text" th:field="*{query}"  class="form-control" /></p>
+    <!--<p>Message: <input type="text" th:field="*{content}" /></p>-->
+    <p><input type="submit" value="Submit" class="btn btn-info"/> <input type="reset" value="Reset" class="btn btn-info" /></p>
+</form>
+</div>
+</body>
+</html>
