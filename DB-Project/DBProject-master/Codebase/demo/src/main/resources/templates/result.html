@@ -1,23 +1,72 @@
-<!DOCTYPE HTML>
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html">
 <head>
     <title>Getting Started: Handling Form Submission</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myDIV");
+            var y = document.getElementById("res");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display ="none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function myFunction1() {
+            var x = document.getElementById("res");
+            var y = document.getElementById("myDIV")
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.display ="none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        function redirect(){
+            var url= "http://localhost:8080/greeting";
+            window.location.replace(url);
+        }
+
+    </script>
 </head>
+
 <body>
-<h1>Result</h1>
+<h1 align="center">Result Page</h1>
 <!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
-<p th:text="'Your Query: ' + ${greeting.query}" />
+
+    <pre th:text="${greeting.validation}"  />
+
+<pre style="font-size: large" th:text="'Your Query:               ' + ${greeting.query}" align="center"/>
+
+<div style="text-align: center" >
+<button onclick="myFunction1()" align="center" class="btn btn-info">View Result</button>
+<button onclick="myFunction()" align="center" class="btn btn-info">View Plans</button>
+<button onclick="redirect()" class="btn btn-info">Submit Another Query</button>
+</div>
+<div id="myDIV" style="display: none" align="center">
 <h2> Unresolved Logical Plan </h2>
-<p th:text="${greeting.f1}" />
+<pre th:text="${greeting.f1}" style="font-size: medium"/>
 <h2>Resolved Logical Plan</h2>
-<p th:text=" ${greeting.f2}" />
+<pre th:text=" ${greeting.f2}" style="font-size: medium" />
 <h2>Optimized Logical Plan</h2>
-<p th:text=" ${greeting.f3}" />
+<pre th:text=" ${greeting.f3}" style="font-size: medium"/>
 <h2>Physical Plan</h2>
-<p th:text="${greeting.f4}" />
-<h1><p th:text="${greeting.validation}" /></h1>
+<pre th:text="${greeting.f4}" style="font-size: medium"/>
+
+</div>
+<div id="res" style="display: none" align="center">
+<pre th:text="${greeting.f5}" />
+</div>
+
 <!--<p th:text="'content: ' + ${greeting.content}" />-->
-<a href="/greeting">Submit another query</a>
+<!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
+
+<!--<p th:text="'content: ' + ${greeting.content}" />-->
+
 </body>
 </html>

@@ -1,14 +1,14 @@
 package com.example.demo;
+import org.apache.commons.lang.ObjectUtils;
 import org.apache.spark.SparkConf;
 import org.apache.spark.SparkEnv;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
-import org.apache.spark.sql.SparkSession;
-import org.apache.spark.sql.Row;
+import org.apache.spark.sql.*;
 import org.apache.spark.sql.execution.SparkSqlParser;
 import java.io.*;
 import java.util.Arrays;
-import org.apache.spark.sql.Dataset;
+
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import java.io.File;
@@ -40,24 +40,27 @@ import java.net.URI;
 @Controller
 public class FirstController {
 
+        @GetMapping("/greeting")
 
-    @GetMapping("/greeting")
-
-    public String greetingForm(Model model) {
-        model.addAttribute("greeting", new Greeting());
-        return "greeting";
-    }
-
-    @PostMapping("/greeting")
-    public String greetingSubmit(@ModelAttribute Greeting greeting) {
-        System.out.println(greeting.getQuery());
-        try {
-            submitQuery(greeting);
-        }catch (IOException e) {
-            System.out.println("exception occoured" + e);
+        public String greetingForm(Model model) {
+            model.addAttribute("greeting", new Greeting());
+            return "greeting";
         }
-        return "result";
-    }
+
+
+
+        @PostMapping("/greeting")
+        public String greetingSubmit(@ModelAttribute Greeting greeting) {
+            System.out.println(greeting.getQuery());
+            try {
+                submitQuery(greeting);
+            }catch (IOException e) {
+                System.out.println("exception occoured" + e);
+            }
+            return "result";
+        }
+
+
 
     public String submitQuery(Greeting greeting) throws IOException {
        int flag1=0;
@@ -70,30 +73,39 @@ public class FirstController {
         Scanner sc = new Scanner(System.in);
         Dataset<Row> lines = ss.read().option("header", true).json("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Data\\student_details.json");
         lines.createOrReplaceTempView("A");
-
-       try {
+        Dataset<Row> sqldf = null;
+        try {
          //   SparkSqlParser sparksqlparser = new SparkSqlParser(new SQLConf());
         //    sparksqlparser.parseExpression(query);
-            Dataset<Row> sqldf = ss.sql(query);
-            sqldf.show();
+            sqldf = ss.sql(query);
+
             
             sqldf.explain(true);
-
+            sqldf.show();
         } catch (Exception e) {
            flag1=1;
             System.out.println("INVALID QUERY");
         }
-       if(flag1==0) {
+
+         //sqldf.write().format("com.databricks.spark.csv").saveAsTable("t1");
+
+         //; save("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt");
+        //sqldf.toString();
+        if(flag1==0) {
            String f1 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f1.txt";
            String f2 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f2.txt";
            String f3 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f3.txt";
            String f4 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f4.txt";
-           String[] f = new String[4];
+            String f5 ="C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt";
+            String garbage="C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\garbage.txt";
+            String[] f = new String[6];
            f[0] = f1;
            f[1] = f2;
            f[2] = f3;
            f[3] = f4;
-           for (int i = 0; i < 4; i++) {
+           f[4]= f5;
+           f[5]=garbage;
+           for (int i = 0; i <= 5; i++) {
                try {
                    new FileWriter(f[i], false).close();
                } catch (java.io.IOException e) {
@@ -116,6 +128,15 @@ public class FirstController {
                    } else if (data.equals("== Physical Plan ==")) {
                        ind = 3;
                    }
+                   else if(data.contains("+---")|| data.contains(" | ") )
+                   {
+
+                       ind =4;
+                   }
+                   else if(data.contains(("INFO")))
+                   {
+                       ind =5;
+                   }
                    String dataa = data + "\n";
                    if (data.trim().length() > 0) {
                        if (ind != -1) {
@@ -125,14 +146,27 @@ public class FirstController {
                                out.write(dataa);
                                out.close();
                                if (ind == 0 && !data.equals("== Parsed Logical Plan ==")) {
-                                   greeting.setF1(greeting.getF1() + dataa);
+                                   String n="\r\n";
+                                   greeting.setF1(greeting.getF1() +n+ dataa);
+
                                } else if (ind == 1 && !data.equals("== Analyzed Logical Plan ==")) {
-                                   greeting.setF2(greeting.getF2() + dataa);
+                                   String n="\r\n";
+                                   greeting.setF2(greeting.getF2() +n+ dataa);
                                } else if (ind == 2 && !data.equals("== Optimized Logical Plan ==")) {
-                                   greeting.setF3(greeting.getF3() + dataa);
+                                   String n ="\r\n";
+                                   greeting.setF3(greeting.getF3()+n + dataa);
                                } else if (ind == 3 && !data.equals("== Physical Plan ==")) {
-                                   greeting.setF4(greeting.getF4() + dataa);
+                                   String n ="\r\n";
+                                   greeting.setF4(greeting.getF4()+n+ dataa);
                                }
+                               else  if (ind ==4)
+                               {
+                                   String nl= greeting.getF5();
+                                   String np= " \r\n";
+                                   greeting.setF5(nl+np+dataa);
+                                   //System.out.println(dataa);
+                               }
+
                            } catch (IOException e) {
                                System.out.println("exception occoured" + e);
                            }

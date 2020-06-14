@@ -1,14 +1,20 @@
 package com.example.demo;
 
+import javax.inject.Singleton;
+import java.lang.reflect.Array;
+
 public class Greeting {
 
     //private long id;
-    private String query;
+
+private String query=" ";
     private String f1=" ";
-    private String f2= " ";
+    private String f2="";
     private String f3=" ";
     private String f4=" ";
+    private String f5=" ";
     private String validation=" ";
+
 
     /*public long getId() {
         return id;
@@ -56,6 +62,15 @@ public class Greeting {
 
     public void setF4(String f4) {
         this.f4 = f4;
+    }
+
+    public String getF5() {
+        return f5;
+    }
+
+    public void setF5(String f55) {
+
+       this.f5 = f55;
     }
 
     public String getValidation() {
