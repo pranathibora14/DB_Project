@@ -1,0 +1,5 @@
+== Analyzed Logical Plan ==
+stud_id: string, first_name: string, last_name: string, birthday: string, gender: string, age: string, stud_email: string, stud_phone: string, stud_address: string, school_id: string, major_id: string
+Project [stud_id#7, first_name#8, last_name#9, birthday#10, gender#11, age#12, stud_email#13, stud_phone#14, stud_address#15, school_id#16, major_id#17]
++- SubqueryAlias student
+   +- Relation[stud_id#7,first_name#8,last_name#9,birthday#10,gender#11,age#12,stud_email#13,stud_phone#14,stud_address#15,school_id#16,major_id#17] csv

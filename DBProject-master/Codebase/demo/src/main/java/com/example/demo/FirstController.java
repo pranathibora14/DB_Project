@@ -65,7 +65,7 @@ public class FirstController {
     public String submitQuery(Greeting greeting) throws IOException {
        int flag1=0;
         String query =greeting.getQuery();
-        PrintWriter writer = new PrintWriter("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\output.txt");
+        PrintWriter writer = new PrintWriter("C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\output.txt");
         writer.print("");
         SparkSession ss = SparkSession.builder().config("spark.sql.warehouse.dir", "file:///tmp/spark-warehouse").master("local").getOrCreate();
         System.out.println(ss.sparkContext().applicationId());
@@ -98,12 +98,12 @@ public class FirstController {
          //; save("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt");
         //sqldf.toString();
         if(flag1==0) {
-           String f1 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f1.txt";
-           String f2 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f2.txt";
-           String f3 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f3.txt";
-           String f4 = "C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f4.txt";
-            String f5 ="C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt";
-            String garbage="C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\garbage.txt";
+           String f1 = "C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f1.txt";
+           String f2 = "C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f2.txt";
+           String f3 = "C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f3.txt";
+           String f4 = "C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f4.txt";
+            String f5 ="C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt";
+            String garbage="C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\garbage.txt";
             String[] f = new String[6];
            f[0] = f1;
            f[1] = f2;
@@ -120,7 +120,7 @@ public class FirstController {
            }
            int ind = -1;
            try {
-               File myObj = new File("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\output.txt");
+               File myObj = new File("C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\output.txt");
                Scanner myReader = new Scanner(myObj);
                int flag = 0;
                while (myReader.hasNextLine()) {

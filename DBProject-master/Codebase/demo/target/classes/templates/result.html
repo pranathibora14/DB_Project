@@ -135,12 +135,14 @@
 <p style="align-content: center" th:text="'Your Query:   ' + ${greeting.query}" align="center"/>
 
 <div style="text-align: center" >
-<button onclick="myFunction1()" align="center" class="btn btn-info">View Result</button>
-<button onclick="myFunction()" align="center" class="btn btn-info">View Plans</button>
-<button onclick="redirect()" class="btn btn-info">Submit Another Query</button>
+<button onclick="myFunction1()" align="center" class="btn btn-info">Query Output</button>
+<button onclick="myFunction()" align="center" class="btn btn-info">Semantic Analysis</button>
+<!--<button onclick="redirect()" class="btn btn-info">Submit Another Query</button>-->
     <button onclick="sparkui()" class="btn btn-info">Spark UI</button>
-    <button onclick="hui()" class="btn btn-info">Hadoop Application</button>
-    <button onclick="namenodeui()" class="btn btn-info">Hadoop Namenode</button>
+    <button onclick="hui()" class="btn btn-info">Hadoop Application UI</button>
+    <button onclick="namenodeui()" class="btn btn-info">Hadoop Namenode UI</button>
+    <button onclick="redirect()" class="btn btn-info">Submit Another Query</button>
+
 </div>
 <br>
 <div id="planbt" style="display: none" align="center" >
