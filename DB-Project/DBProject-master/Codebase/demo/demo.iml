@@ -95,9 +95,5 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-devtools:2.3.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:2.3.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.3.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: com.databricks:spark-csv_2.11:1.5.0" level="project" />
-    <orderEntry type="library" name="Maven: org.scala-lang:scala-library:2.11.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.commons:commons-csv:1.1" level="project" />
-    <orderEntry type="library" name="Maven: com.univocity:univocity-parsers:1.5.1" level="project" />
   </component>
 </module>

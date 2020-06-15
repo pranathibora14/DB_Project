@@ -71,8 +71,14 @@ public class FirstController {
         System.out.println(ss.sparkContext().applicationId());
         System.setProperty("Hadoop.home.dir", "C:/Users/Administrator/Downloads/winutils-master/hadoop-2.7.1");
         Scanner sc = new Scanner(System.in);
-        Dataset<Row> lines = ss.read().option("header", true).json("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Data\\student_details.json");
-        lines.createOrReplaceTempView("A");
+        // C:\Users\Administrator\Desktop\Project\DB-Project\DBProject-master\Data\student_details.json
+        Dataset<Row> lines = ss.read().option("header", true).csv("hdfs://localhost:9000/major.csv");
+        Dataset<Row> line1 = ss.read().option("header", true).csv("hdfs://localhost:9000/student_data.csv");
+        Dataset<Row> line2 = ss.read().option("header",true).csv("hdfs://localhost:9000/school_data.csv");
+
+        lines.createOrReplaceTempView("major");
+        line1.createOrReplaceTempView("student");
+        line2.createOrReplaceTempView("school");
         Dataset<Row> sqldf = null;
         try {
          //   SparkSqlParser sparksqlparser = new SparkSqlParser(new SQLConf());

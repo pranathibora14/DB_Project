@@ -1,4 +1,3 @@
 == Parsed Logical Plan ==
 'Project [*]
-+- 'Filter ('height > 170)
-   +- 'UnresolvedRelation `A`
++- 'UnresolvedRelation `student`

@@ -1,19 +1,25 @@
-+------+----+------+
-|Height|Name|weight|
-+------+----+------+
-|   191|   C|    70|
-|   178|   D|    80|
-|   190|   E|    90|
-|   186|   F|    50|
-|   185|   G|    60|
-|   180|   J|    90|
-|   178|   K|    50|
-|   188|   L|    60|
-|   174|   N|    80|
-|   186|   O|    90|
-|   196|   P|    50|
-|   190|   Q|    60|
-|   185|   R|    70|
-|   175|   S|    80|
-|   180|   X|    80|
-+------+----+------+
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
+|stud_id|first_name|last_name|  birthday|gender|age|         stud_email|    stud_phone|stud_address|school_id|major_id|
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
+|      1|     Ellen|    Greer| 3/30/1993|Female| 37|    finrikan@jal.eh|(508) 331-2026|    Muomawur|      741|       6|
+|      2|   Michael|  Flowers|  6/5/1968|Female| 31|      zomuk@tumi.sy|(439) 800-4434|     Esifise|      777|       4|
+|      3|    Rodney|   Farmer|  8/3/1965|  Male| 46|    zogruklum@lo.sr|(935) 935-2337|      Utwife|      982|       3|
+|      4|     Ethan|    Moody| 3/24/1982|  Male| 46|      legip@fuon.tw|(719) 620-8036|    Nejolaca|      366|       6|
+|      5|    Hattie|   Haynes|12/15/1992|Female| 52|bowhaduk@palvazi.sk|(272) 783-8908|      Zujigu|      398|       7|
+|      6|   Lucinda|     Ross| 1/24/1968|Female| 56|      ruodza@uja.mz|(783) 536-6898|   Pefujutaw|      782|       3|
+|      7|    Tillie|     Huff|10/14/1990|Female| 20|    pufat@jajeji.do|(868) 313-5930|    Daforovu|      049|       0|
+|      8|    Arthur|      Lee|11/25/1988|Female| 62|          iga@nu.vc|(407) 897-3898|    Udiwemiz|      994|       7|
+|      9|   Blanche|  Summers| 2/18/1960|Female| 54|    adoego@bijij.bt|(623) 538-6510|    Anocowof|      303|       9|
+|     10|     Mayme|   Thomas|11/11/1989|Female| 42|     izilono@dod.ao|(560) 845-8281|      Voabga|      307|       4|
+|     11|     Laura|   Jordan| 2/10/1968|  Male| 39|   tutice@tuvvim.zw|(462) 605-1483|    Juwwofit|      097|       4|
+|     12|    Travis|     Vega|  8/9/1977|Female| 54|    sihane@agate.uy|(373) 543-2782|     Abmiiji|      977|       1|
+|     13| Christina|  Coleman| 9/29/1997|  Male| 32|   zopaz@uznurok.is|(609) 386-8087|    Kewhuusu|      299|       5|
+|     14|     Maude| Morrison| 9/17/1980|  Male| 55|           en@ma.io|(914) 489-3870|    Fafujdow|      598|       5|
+|     15|    Nettie|  Gilbert| 4/13/1975|Female| 64|      emeehi@dib.vc|(536) 938-5161|    Cajloofo|      354|       6|
+|     16|     Maude|     Todd| 7/21/1955|  Male| 18| ebharej@bufolen.am|(652) 375-3133|     Minanic|      055|       5|
+|     17|   Minerva|  Higgins|  5/9/1961|Female| 25| dohgir@kujtazev.mq|(229) 938-6930|     Bagacni|      741|       2|
+|     18|    Calvin|   Potter|11/15/1970|Female| 49|        gavuz@bi.gd|(425) 585-2296|      Lezeaw|      550|       6|
+|     19|    Ronald|   Harmon| 2/24/1967|  Male| 20|  ehufu@cocuwtel.ch|(439) 587-1863|     Oznejef|      054|       7|
+|     20|    Martha|  Baldwin| 8/27/2000|  Male| 57|  maptipe@pacmif.pa|(370) 392-7921|    Uwabosur|      836|       4|
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
+only showing top 20 rows

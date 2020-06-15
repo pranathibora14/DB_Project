@@ -1,6 +1,5 @@
 == Analyzed Logical Plan ==
-Height: bigint, Name: string, weight: bigint
-Project [Height#0L, Name#1, weight#2L]
-+- Filter (height#0L > cast(170 as bigint))
-   +- SubqueryAlias a
-      +- Relation[Height#0L,Name#1,weight#2L] json
+stud_id: string, first_name: string, last_name: string, birthday: string, gender: string, age: string, stud_email: string, stud_phone: string, stud_address: string, school_id: string, major_id: string
+Project [stud_id#93, first_name#94, last_name#95, birthday#96, gender#97, age#98, stud_email#99, stud_phone#100, stud_address#101, school_id#102, major_id#103]
++- SubqueryAlias student
+   +- Relation[stud_id#93,first_name#94,last_name#95,birthday#96,gender#97,age#98,stud_email#99,stud_phone#100,stud_address#101,school_id#102,major_id#103] csv
