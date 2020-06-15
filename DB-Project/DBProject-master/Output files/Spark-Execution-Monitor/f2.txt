@@ -1,5 +1,6 @@
 == Analyzed Logical Plan ==
 Height: bigint, Name: string, weight: bigint
 Project [Height#0L, Name#1, weight#2L]
-+- SubqueryAlias a
-   +- Relation[Height#0L,Name#1,weight#2L] json
++- Filter (height#0L > cast(170 as bigint))
+   +- SubqueryAlias a
+      +- Relation[Height#0L,Name#1,weight#2L] json

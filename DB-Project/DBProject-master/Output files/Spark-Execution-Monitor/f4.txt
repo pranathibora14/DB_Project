@@ -1,2 +1,4 @@
 == Physical Plan ==
-*Scan json [Height#0L,Name#1,weight#2L] Format: JSON, InputPaths: file:/C:/Users/Administrator/Desktop/Project/DB-Project/DBProject-master/Data/student_details.json, PushedFilters: [], ReadSchema: struct<Height:bigint,Name:string,weight:bigint>
+*Project [Height#0L, Name#1, weight#2L]
++- *Filter (isnotnull(height#0L) && (height#0L > 170))
+   +- *Scan json [Height#0L,Name#1,weight#2L] Format: JSON, InputPaths: file:/C:/Users/Administrator/Desktop/Project/DB-Project/DBProject-master/Data/student_details.json, PushedFilters: [IsNotNull(Height), GreaterThan(Height,170)], ReadSchema: struct<Height:bigint,Name:string,weight:bigint>

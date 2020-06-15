@@ -1,2 +1,3 @@
 == Optimized Logical Plan ==
-Relation[Height#0L,Name#1,weight#2L] json
+Filter (isnotnull(height#0L) && (height#0L > 170))
++- Relation[Height#0L,Name#1,weight#2L] json

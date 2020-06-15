@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script>
         function myFunction() {
-            var x = document.getElementById("myDIV");
+            var x = document.getElementById("planbt");
             var y = document.getElementById("res");
             if (x.style.display === "none") {
                 x.style.display = "block";
@@ -19,7 +19,7 @@
         }
         function myFunction1() {
             var x = document.getElementById("res");
-            var y = document.getElementById("myDIV")
+            var y = document.getElementById("planbt")
             if (x.style.display === "none") {
                 x.style.display = "block";
                 y.style.display ="none";
@@ -27,10 +27,85 @@
                 x.style.display = "none";
             }
         }
+
+        function ulp() {
+            var x = document.getElementById("res");
+            //var y = document.getElementById("myDIV");
+            var z =document.getElementById("ulp");
+            var a =document.getElementById("rlp");
+            var b =document.getElementById("olp");
+            var c =document.getElementById("pp")
+            if (z.style.display === "none") {
+                z.style.display = "block";
+                x.style.display ="none";
+                a.style.display ="none";
+                b.style.display ="none";
+                c.style.display ="none";
+            } else {
+                z.style.display = "none";
+            }
+        }
+
+        function rlp() {
+            var x = document.getElementById("res");
+            //var y = document.getElementById("myDIV");
+            var z =document.getElementById("ulp");
+            var a =document.getElementById("rlp");
+            var b =document.getElementById("olp");
+            var c =document.getElementById("pp")
+            if (a.style.display === "none") {
+                a.style.display = "block";
+                x.style.display ="none";
+                b.style.display ="none";
+                c.style.display ="none";
+                z.style.display ="none";
+            } else {
+                a.style.display = "none";
+            }
+        }
+        function olp() {
+            var x = document.getElementById("res");
+            //var y = document.getElementById("myDIV");
+            var z =document.getElementById("ulp");
+            var a =document.getElementById("rlp");
+            var b =document.getElementById("olp");
+            var c =document.getElementById("pp")
+            if (b.style.display === "none") {
+                b.style.display = "block";
+                z.style.display ="none";
+                a.style.display ="none";
+                x.style.display ="none";
+                c.style.display ="none";
+            } else {
+                b.style.display = "none";
+            }
+        }
+        function pp() {
+            var x = document.getElementById("res");
+            //var y = document.getElementById("myDIV");
+            var z =document.getElementById("ulp");
+            var a =document.getElementById("rlp");
+            var b =document.getElementById("olp");
+            var c =document.getElementById("pp")
+            if (c.style.display === "none") {
+                c.style.display = "block";
+                x.style.display ="none";
+                a.style.display ="none";
+                b.style.display ="none";
+                z.style.display ="none";
+            } else {
+                c.style.display = "none";
+            }
+        }
         function redirect(){
             var url= "http://localhost:8080/greeting";
             window.location.replace(url);
         }
+        function sparkui(){
+            var url= "http://localhost:4040/";
+            window.open(url,'_blank');
+        }
+
 
     </script>
 </head>
@@ -39,29 +114,46 @@
 <h1 align="center">Result Page</h1>
 <!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
 
-    <pre th:text="${greeting.validation}"  />
+    <p th:text="${greeting.validation}"  />
 
-<pre style="font-size: large" th:text="'Your Query:               ' + ${greeting.query}" align="center"/>
+<p style="align-content: center" th:text="'Your Query:   ' + ${greeting.query}" align="center"/>
 
 <div style="text-align: center" >
 <button onclick="myFunction1()" align="center" class="btn btn-info">View Result</button>
 <button onclick="myFunction()" align="center" class="btn btn-info">View Plans</button>
 <button onclick="redirect()" class="btn btn-info">Submit Another Query</button>
+    <button onclick="sparkui()" class="btn btn-info">Submit Another Query</button>
 </div>
-<div id="myDIV" style="display: none" align="center">
-<h2> Unresolved Logical Plan </h2>
-<pre th:text="${greeting.f1}" style="font-size: medium"/>
-<h2>Resolved Logical Plan</h2>
-<pre th:text=" ${greeting.f2}" style="font-size: medium" />
-<h2>Optimized Logical Plan</h2>
-<pre th:text=" ${greeting.f3}" style="font-size: medium"/>
-<h2>Physical Plan</h2>
-<pre th:text="${greeting.f4}" style="font-size: medium"/>
+<div id="planbt" style="display: none">
+    <pre>
+    <button style="display: none" onclick="ulp()" align="center" class="btn btn-info">View Unresolved logical Plan</button>
+    <button style="display: none" onclick="rlp()" align="center" class="btn btn-info">View Resolved Logical Plan</button>
+    <button style="display: none" onclick="olp()" align="center" class="btn btn-info">View Optimized Logical Plan</button>
+    <button style="display: none" onclick="pp()" align="center" class="btn btn-info">View Physical Plan</button>
+</pre>
+</div>
 
+
+    <div id="ulp" style="display: none" align="center">
+        <h2> Unresolved Logical Plan </h2>
+        <pre th:text="${greeting.f1}" style="font-size: medium"/>
+    </div>
+     <div id="rlp" style="display: none" align="center">
+        <h2>Resolved Logical Plan</h2>
+        <pre th:text=" ${greeting.f2}" style="font-size: medium" />
+    </div>
+     <div id="olp" style="display: none" align="center">
+        <h2>Optimized Logical Plan</h2>
+        <pre th:text=" ${greeting.f3}" style="font-size: medium"/>
+    </div>
+     <div id="pp" style="display: none" align="center">
+        <h2>Physical Plan</h2>
+        <pre th:text="${greeting.f4}" style="font-size: medium"/>
+    </div>
 </div>
 <div id="res" style="display: none" align="center">
 <pre th:text="${greeting.f5}" />
-</div>
+
 
 <!--<p th:text="'content: ' + ${greeting.content}" />-->
 <!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
