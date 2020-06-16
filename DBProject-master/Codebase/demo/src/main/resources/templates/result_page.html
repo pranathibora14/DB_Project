@@ -126,18 +126,19 @@
         }
 
 
+
     </script>
 </head>
-
 <body>
 <h1 align="center" class="welcome_title">Query Results</h1>
 
    <!--/*@thymesVar id="query" type="com.example.demo.Query"*/-->
 
-    <p th:text="${query.validation}"  />
 
+<br>
 <p style="align-content: center" th:text="'Your Query:   ' + ${query.query_str}" align="center" class="txt"/>
-
+<p th:text="${query.validation}" class="txt" align="center"/>
+<br>
 <div style="text-align: center" >
 <button onclick="myFunction1()" align="center" class="btn btn-info buttons">Query Output</button>
 <button onclick="myFunction()" align="center" class="btn btn-info buttons">Semantic Analysis</button>

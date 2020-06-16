@@ -1,5 +1,5 @@
 == Analyzed Logical Plan ==
-school_id: string, school_name: string, school_email: string, school_phone: string, street: string, city: string, state: string, zip_code: string
-Project [school_id#92, school_name#93, school_email#94, school_phone#95, street#96, city#97, state#98, zip_code#99]
-+- SubqueryAlias school
-   +- Relation[school_id#92,school_name#93,school_email#94,school_phone#95,street#96,city#97,state#98,zip_code#99] csv
+stud_id: string, first_name: string, last_name: string, birthday: string, gender: string, age: string, stud_email: string, stud_phone: string, stud_address: string, school_id: string, major_id: string
+Project [stud_id#58, first_name#59, last_name#60, birthday#61, gender#62, age#63, stud_email#64, stud_phone#65, stud_address#66, school_id#67, major_id#68]
++- SubqueryAlias student
+   +- Relation[stud_id#58,first_name#59,last_name#60,birthday#61,gender#62,age#63,stud_email#64,stud_phone#65,stud_address#66,school_id#67,major_id#68] csv

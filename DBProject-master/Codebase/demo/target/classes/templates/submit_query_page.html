@@ -8,6 +8,64 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="CSS/mycss.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Roboto&display=swap" rel="stylesheet">
+    <script>
+
+        function database_toggler(){
+        var x = document.getElementById("db_toggler");
+
+            if (x.style.display === "none"){
+                x.style.display="block";
+            }
+            else{
+                x.style.display="none";
+            }
+        }
+
+        function student_table_toggler(){
+            var a =document.getElementById("stud");
+            var b =document.getElementById("school");
+            var c = document.getElementById("maj");
+
+            if (a.style.display==="none"){
+                a.style.display="block";
+                b.style.display="none";
+                c.style.display="none";
+            }
+            else{
+                a.style.display="none";
+            }
+        }
+
+        function school_table_toggler() {
+            var a = document.getElementById("stud");
+            var b = document.getElementById("school");
+            var c = document.getElementById("maj");
+            if(b.style.display==="none")
+            {
+                b.style.display = "block";
+                a.style.display ="none";
+                c.style.display = "none";
+            }
+            else{
+                b.style.display = "none";
+            }
+        }
+
+        function major_table_toggler() {
+            var a = document.getElementById("stud");
+            var b =document.getElementById("school");
+            var c =document.getElementById("maj");
+            if(c.style.display=="none")
+            {
+                c.style.display="block";
+                a.style.display="none";
+                b.style.display="none";
+            }
+            else{
+                c.style.display="none";
+            }
+        }
+    </script>
 </head>
 <body>
 <h1 align="center" class="welcome_title">Welcome to SparkSQL Query Execution!</h1>
@@ -15,8 +73,7 @@
 <!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
 <div style="text-align: center;"   class="form-group">
 <form action="#" th:action="@{/semanticAnalysis}" th:object="${query}" method="post">
-    <p></p>
-    <p></p>
+    <br>
     <p class="txt">Enter Query:</p>
     <input type="text" th:field="*{query_str}"  class="form-control box" id="box_text" />
     <!--<p>Message: <input type="text" th:field="*{content}" /></p>-->
@@ -24,6 +81,35 @@
     <p><input type="submit" align="center" value="Submit" class="btn btn-info btn-secondary buttons " /> <input type="reset" align="center" value="Reset" class="btn btn-info btn-secondary buttons"  /></p>
 </form>
 </div>
+<div class="dbguide" align="center">
+<button onclick="database_toggler()" class="btn btn-info buttons">See All Databases!</button>
+    <button class="btn btn-info buttons" >Go to User Guide!</button>
+</div>
+<br>
+<br>
+<div id="db_toggler" style="display:none" align="center">
+    <button onclick="student_table_toggler()" class="btn btn-info buttons">Student Database</button>
+    <button onclick="school_table_toggler()" class="btn btn-info buttons">School Database</button>
+    <button onclick="major_table_toggler()" class="btn btn-info buttons">Major Database</button>
+
+</div>
+
+<div id="stud" style="display:none" align="center" class="results">
+    <h1>student</h1>
+</div>
+<div id="school" style="display:none" align="center" class="results">
+    <h1>school</h1>
+</div>
+<div id="maj" style="display:none" align="center" class="results">
+    <h1>major</h1>
+</div>
+
+<table>
+    <tr>
+        <th>stud_id</th><th>first_name</th><th>last_name</th>
+    </tr>
+
+</table>
 
 </body>
 </html>

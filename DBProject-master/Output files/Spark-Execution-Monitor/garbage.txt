@@ -1,211 +1,209 @@
-20/06/16 17:15:04 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 127.2 KB, free 2003.9 MB)
-20/06/16 17:15:04 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.9 MB)
-20/06/16 17:15:04 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:04 INFO SparkContext: Created broadcast 15 from csv at FirstController.java:56
-20/06/16 17:15:04 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:04 INFO SparkContext: Starting job: csv at FirstController.java:56
-20/06/16 17:15:04 INFO DAGScheduler: Got job 7 (csv at FirstController.java:56) with 1 output partitions
-20/06/16 17:15:04 INFO DAGScheduler: Final stage: ResultStage 7 (csv at FirstController.java:56)
-20/06/16 17:15:04 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:04 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:04 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[30] at csv at FirstController.java:56), which has no missing parents
-20/06/16 17:15:04 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 3.3 KB, free 2003.9 MB)
-20/06/16 17:15:04 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 2010.0 B, free 2003.9 MB)
-20/06/16 17:15:04 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 192.168.10.124:60081 (size: 2010.0 B, free: 2004.5 MB)
-20/06/16 17:15:04 INFO SparkContext: Created broadcast 16 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:04 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[30] at csv at FirstController.java:56)
-20/06/16 17:15:04 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
-20/06/16 17:15:04 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7, localhost, partition 0, ANY, 5368 bytes)
-20/06/16 17:15:04 INFO Executor: Running task 0.0 in stage 7.0 (TID 7)
-20/06/16 17:15:04 INFO HadoopRDD: Input split: hdfs://localhost:9000/major.csv:0+137
-20/06/16 17:15:04 INFO Executor: Finished task 0.0 in stage 7.0 (TID 7). 1041 bytes result sent to driver
-20/06/16 17:15:04 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 34 ms on localhost (1/1)
-20/06/16 17:15:04 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
-20/06/16 17:15:04 INFO DAGScheduler: ResultStage 7 (csv at FirstController.java:56) finished in 0.036 s
-20/06/16 17:15:04 INFO DAGScheduler: Job 7 finished: csv at FirstController.java:56, took 0.051131 s
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 127.2 KB, free 2003.7 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.7 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 17 from csv at FirstController.java:56
-20/06/16 17:15:05 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:05 INFO SparkContext: Starting job: csv at FirstController.java:56
-20/06/16 17:15:05 INFO DAGScheduler: Got job 8 (csv at FirstController.java:56) with 1 output partitions
-20/06/16 17:15:05 INFO DAGScheduler: Final stage: ResultStage 8 (csv at FirstController.java:56)
-20/06/16 17:15:05 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:05 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:05 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[33] at csv at FirstController.java:56), which has no missing parents
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 3.3 KB, free 2003.7 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 2007.0 B, free 2003.7 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on 192.168.10.124:60081 (size: 2007.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 18 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[33] at csv at FirstController.java:56)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
-20/06/16 17:15:05 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8, localhost, partition 0, ANY, 5368 bytes)
-20/06/16 17:15:05 INFO Executor: Running task 0.0 in stage 8.0 (TID 8)
-20/06/16 17:15:05 INFO HadoopRDD: Input split: hdfs://localhost:9000/major.csv:0+137
-20/06/16 17:15:05 INFO Executor: Finished task 0.0 in stage 8.0 (TID 8). 954 bytes result sent to driver
-20/06/16 17:15:05 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 26 ms on localhost (1/1)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
-20/06/16 17:15:05 INFO DAGScheduler: ResultStage 8 (csv at FirstController.java:56) finished in 0.027 s
-20/06/16 17:15:05 INFO DAGScheduler: Job 8 finished: csv at FirstController.java:56, took 0.043504 s
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 127.2 KB, free 2003.6 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 19 from csv at FirstController.java:57
-20/06/16 17:15:05 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:05 INFO SparkContext: Starting job: csv at FirstController.java:57
-20/06/16 17:15:05 INFO DAGScheduler: Got job 9 (csv at FirstController.java:57) with 1 output partitions
-20/06/16 17:15:05 INFO DAGScheduler: Final stage: ResultStage 9 (csv at FirstController.java:57)
-20/06/16 17:15:05 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:05 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:05 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[37] at csv at FirstController.java:57), which has no missing parents
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 3.3 KB, free 2003.6 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 2013.0 B, free 2003.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on 192.168.10.124:60081 (size: 2013.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 20 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[37] at csv at FirstController.java:57)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks
-20/06/16 17:15:05 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9, localhost, partition 0, ANY, 5375 bytes)
-20/06/16 17:15:05 INFO Executor: Running task 0.0 in stage 9.0 (TID 9)
-20/06/16 17:15:05 INFO HadoopRDD: Input split: hdfs://localhost:9000/student_data.csv:0+2093675
-20/06/16 17:15:05 INFO Executor: Finished task 0.0 in stage 9.0 (TID 9). 1021 bytes result sent to driver
-20/06/16 17:15:05 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 28 ms on localhost (1/1)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
-20/06/16 17:15:05 INFO DAGScheduler: ResultStage 9 (csv at FirstController.java:57) finished in 0.029 s
-20/06/16 17:15:05 INFO DAGScheduler: Job 9 finished: csv at FirstController.java:57, took 0.047276 s
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 127.2 KB, free 2003.5 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.4 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 21 from csv at FirstController.java:57
-20/06/16 17:15:05 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:05 INFO SparkContext: Starting job: csv at FirstController.java:57
-20/06/16 17:15:05 INFO DAGScheduler: Got job 10 (csv at FirstController.java:57) with 1 output partitions
-20/06/16 17:15:05 INFO DAGScheduler: Final stage: ResultStage 10 (csv at FirstController.java:57)
-20/06/16 17:15:05 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:05 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:05 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[40] at csv at FirstController.java:57), which has no missing parents
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 3.3 KB, free 2003.4 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 2013.0 B, free 2003.4 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on 192.168.10.124:60081 (size: 2013.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[40] at csv at FirstController.java:57)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
-20/06/16 17:15:05 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10, localhost, partition 0, ANY, 5375 bytes)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 192.168.10.124:60081 in memory (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO Executor: Running task 0.0 in stage 10.0 (TID 10)
-20/06/16 17:15:05 INFO HadoopRDD: Input split: hdfs://localhost:9000/student_data.csv:0+2093675
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 192.168.10.124:60081 in memory (size: 2012.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_10_piece0 on 192.168.10.124:60081 in memory (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_11_piece0 on 192.168.10.124:60081 in memory (size: 2012.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_12_piece0 on 192.168.10.124:60081 in memory (size: 14.7 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_13_piece0 on 192.168.10.124:60081 in memory (size: 14.7 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO Executor: Finished task 0.0 in stage 10.0 (TID 10). 1021 bytes result sent to driver
-20/06/16 17:15:05 INFO ContextCleaner: Cleaned accumulator 264
-20/06/16 17:15:05 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 62 ms on localhost (1/1)
-20/06/16 17:15:05 INFO ContextCleaner: Cleaned accumulator 265
-20/06/16 17:15:05 INFO ContextCleaner: Cleaned accumulator 266
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
-20/06/16 17:15:05 INFO DAGScheduler: ResultStage 10 (csv at FirstController.java:57) finished in 0.064 s
-20/06/16 17:15:05 INFO DAGScheduler: Job 10 finished: csv at FirstController.java:57, took 0.144351 s
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_14_piece0 on 192.168.10.124:60081 in memory (size: 5.0 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_15_piece0 on 192.168.10.124:60081 in memory (size: 14.3 KB, free: 2004.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_16_piece0 on 192.168.10.124:60081 in memory (size: 2010.0 B, free: 2004.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_17_piece0 on 192.168.10.124:60081 in memory (size: 14.3 KB, free: 2004.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_18_piece0 on 192.168.10.124:60081 in memory (size: 2007.0 B, free: 2004.6 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Removed broadcast_20_piece0 on 192.168.10.124:60081 in memory (size: 2013.0 B, free: 2004.6 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 127.2 KB, free 2004.2 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2004.2 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.6 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 23 from csv at FirstController.java:58
-20/06/16 17:15:05 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:05 INFO SparkContext: Starting job: csv at FirstController.java:58
-20/06/16 17:15:05 INFO DAGScheduler: Got job 11 (csv at FirstController.java:58) with 1 output partitions
-20/06/16 17:15:05 INFO DAGScheduler: Final stage: ResultStage 11 (csv at FirstController.java:58)
-20/06/16 17:15:05 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:05 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:05 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[44] at csv at FirstController.java:58), which has no missing parents
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 3.3 KB, free 2004.2 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 2012.0 B, free 2004.2 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on 192.168.10.124:60081 (size: 2012.0 B, free: 2004.6 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[44] at csv at FirstController.java:58)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
-20/06/16 17:15:05 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11, localhost, partition 0, ANY, 5374 bytes)
-20/06/16 17:15:05 INFO Executor: Running task 0.0 in stage 11.0 (TID 11)
-20/06/16 17:15:05 INFO HadoopRDD: Input split: hdfs://localhost:9000/school_data.csv:0+78546
-20/06/16 17:15:05 INFO Executor: Finished task 0.0 in stage 11.0 (TID 11). 993 bytes result sent to driver
-20/06/16 17:15:05 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 30 ms on localhost (1/1)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
-20/06/16 17:15:05 INFO DAGScheduler: ResultStage 11 (csv at FirstController.java:58) finished in 0.032 s
-20/06/16 17:15:05 INFO DAGScheduler: Job 11 finished: csv at FirstController.java:58, took 0.046357 s
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 127.2 KB, free 2004.1 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2004.0 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on 192.168.10.124:60081 (size: 14.3 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 25 from csv at FirstController.java:58
-20/06/16 17:15:05 INFO FileInputFormat: Total input paths to process : 1
-20/06/16 17:15:05 INFO SparkContext: Starting job: csv at FirstController.java:58
-20/06/16 17:15:05 INFO DAGScheduler: Got job 12 (csv at FirstController.java:58) with 1 output partitions
-20/06/16 17:15:05 INFO DAGScheduler: Final stage: ResultStage 12 (csv at FirstController.java:58)
-20/06/16 17:15:05 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:05 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:05 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[47] at csv at FirstController.java:58), which has no missing parents
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 3.3 KB, free 2004.0 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 2012.0 B, free 2004.0 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on 192.168.10.124:60081 (size: 2012.0 B, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:05 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[47] at csv at FirstController.java:58)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
-20/06/16 17:15:05 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12, localhost, partition 0, ANY, 5374 bytes)
-20/06/16 17:15:05 INFO Executor: Running task 0.0 in stage 12.0 (TID 12)
-20/06/16 17:15:05 INFO HadoopRDD: Input split: hdfs://localhost:9000/school_data.csv:0+78546
-20/06/16 17:15:05 INFO Executor: Finished task 0.0 in stage 12.0 (TID 12). 993 bytes result sent to driver
-20/06/16 17:15:05 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 23 ms on localhost (1/1)
-20/06/16 17:15:05 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
-20/06/16 17:15:05 INFO DAGScheduler: ResultStage 12 (csv at FirstController.java:58) finished in 0.025 s
-20/06/16 17:15:05 INFO DAGScheduler: Job 12 finished: csv at FirstController.java:58, took 0.038483 s
-20/06/16 17:15:05 INFO SparkSqlParser: Parsing command: major
-20/06/16 17:15:05 INFO SparkSqlParser: Parsing command: student
-20/06/16 17:15:05 INFO SparkSqlParser: Parsing command: school
-20/06/16 17:15:05 INFO SparkSqlParser: Parsing command:  select * from school
-94
-20/06/16 17:15:05 INFO FileSourceStrategy: Pruning directories with: 
-20/06/16 17:15:05 INFO FileSourceStrategy: Post-Scan Filters: 
-20/06/16 17:15:05 INFO FileSourceStrategy: Pruned Data Schema: struct<school_id: string, school_name: string, school_email: string, school_phone: string, street: string ... 6 more fields>
-20/06/16 17:15:05 INFO FileSourceStrategy: Pushed Filters: 
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 132.0 KB, free 2003.9 MB)
-20/06/16 17:15:05 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 14.7 KB, free 2003.9 MB)
-20/06/16 17:15:05 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on 192.168.10.124:60081 (size: 14.7 KB, free: 2004.5 MB)
-20/06/16 17:15:05 INFO SparkContext: Created broadcast 27 from explain at FirstController.java:73
-20/06/16 17:15:05 INFO FileSourceStrategy: Planning scan with bin packing, max size: 4272850 bytes, open cost is considered as scanning 4194304 bytes.
-20/06/16 17:15:06 INFO FileSourceStrategy: Pruning directories with: 
-20/06/16 17:15:06 INFO FileSourceStrategy: Post-Scan Filters: 
-20/06/16 17:15:06 INFO FileSourceStrategy: Pruned Data Schema: struct<school_id: string, school_name: string, school_email: string, school_phone: string, street: string ... 6 more fields>
-20/06/16 17:15:06 INFO FileSourceStrategy: Pushed Filters: 
-20/06/16 17:15:06 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 132.0 KB, free 2003.8 MB)
-20/06/16 17:15:06 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 14.7 KB, free 2003.7 MB)
-20/06/16 17:15:06 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on 192.168.10.124:60081 (size: 14.7 KB, free: 2004.5 MB)
-20/06/16 17:15:06 INFO SparkContext: Created broadcast 28 from show at FirstController.java:74
-20/06/16 17:15:06 INFO FileSourceStrategy: Planning scan with bin packing, max size: 4272850 bytes, open cost is considered as scanning 4194304 bytes.
-20/06/16 17:15:06 INFO CodeGenerator: Code generated in 23.0026 ms
-20/06/16 17:15:06 INFO SparkContext: Starting job: show at FirstController.java:74
-20/06/16 17:15:06 INFO DAGScheduler: Got job 13 (show at FirstController.java:74) with 1 output partitions
-20/06/16 17:15:06 INFO DAGScheduler: Final stage: ResultStage 13 (show at FirstController.java:74)
-20/06/16 17:15:06 INFO DAGScheduler: Parents of final stage: List()
-20/06/16 17:15:06 INFO DAGScheduler: Missing parents: List()
-20/06/16 17:15:06 INFO DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[55] at show at FirstController.java:74), which has no missing parents
-20/06/16 17:15:06 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 8.0 KB, free 2003.7 MB)
-20/06/16 17:15:06 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 4.4 KB, free 2003.7 MB)
-20/06/16 17:15:06 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on 192.168.10.124:60081 (size: 4.4 KB, free: 2004.5 MB)
-20/06/16 17:15:06 INFO SparkContext: Created broadcast 29 from broadcast at DAGScheduler.scala:1012
-20/06/16 17:15:06 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[55] at show at FirstController.java:74)
-20/06/16 17:15:06 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks
-20/06/16 17:15:06 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 13, localhost, partition 0, ANY, 5794 bytes)
-20/06/16 17:15:06 INFO Executor: Running task 0.0 in stage 13.0 (TID 13)
-20/06/16 17:15:06 INFO FileScanRDD: Reading File path: hdfs://localhost:9000/school_data.csv, range: 0-78546, partition values: [empty row]
-20/06/16 17:15:06 INFO CodeGenerator: Code generated in 34.6957 ms
-20/06/16 17:15:06 INFO Executor: Finished task 0.0 in stage 13.0 (TID 13). 3683 bytes result sent to driver
-20/06/16 17:15:06 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 13) in 74 ms on localhost (1/1)
-20/06/16 17:15:06 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
-20/06/16 17:15:06 INFO DAGScheduler: ResultStage 13 (show at FirstController.java:74) finished in 0.075 s
-20/06/16 17:15:06 INFO DAGScheduler: Job 13 finished: show at FirstController.java:74, took 0.088895 s
-20/06/16 17:15:06 INFO CodeGenerator: Code generated in 32.9528 ms
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 127.2 KB, free 2003.7 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.7 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 12 from csv at FirstController.java:56
+20/06/16 21:13:13 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:13 INFO SparkContext: Starting job: csv at FirstController.java:56
+20/06/16 21:13:13 INFO DAGScheduler: Got job 6 (csv at FirstController.java:56) with 1 output partitions
+20/06/16 21:13:13 INFO DAGScheduler: Final stage: ResultStage 6 (csv at FirstController.java:56)
+20/06/16 21:13:13 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:13 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:13 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[26] at csv at FirstController.java:56), which has no missing parents
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 3.3 KB, free 2003.7 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 2007.0 B, free 2003.7 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 192.168.10.126:50189 (size: 2007.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 13 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:13 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (MapPartitionsRDD[26] at csv at FirstController.java:56)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks
+20/06/16 21:13:13 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, localhost, partition 0, ANY, 5368 bytes)
+20/06/16 21:13:13 INFO Executor: Running task 0.0 in stage 6.0 (TID 6)
+20/06/16 21:13:13 INFO HadoopRDD: Input split: hdfs://localhost:9000/major.csv:0+137
+20/06/16 21:13:13 INFO Executor: Finished task 0.0 in stage 6.0 (TID 6). 954 bytes result sent to driver
+20/06/16 21:13:13 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 21 ms on localhost (1/1)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+20/06/16 21:13:13 INFO DAGScheduler: ResultStage 6 (csv at FirstController.java:56) finished in 0.024 s
+20/06/16 21:13:13 INFO DAGScheduler: Job 6 finished: csv at FirstController.java:56, took 0.042440 s
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 127.2 KB, free 2003.5 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.5 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 14 from csv at FirstController.java:56
+20/06/16 21:13:13 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Starting job: csv at FirstController.java:56
+20/06/16 21:13:13 INFO DAGScheduler: Got job 7 (csv at FirstController.java:56) with 1 output partitions
+20/06/16 21:13:13 INFO DAGScheduler: Final stage: ResultStage 7 (csv at FirstController.java:56)
+20/06/16 21:13:13 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:13 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:13 INFO DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[29] at csv at FirstController.java:56), which has no missing parents
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 192.168.10.126:50189 in memory (size: 2017.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 3.3 KB, free 2003.6 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 2007.0 B, free 2003.7 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 192.168.10.126:50189 (size: 2007.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 192.168.10.126:50189 in memory (size: 2006.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:13 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[29] at csv at FirstController.java:56)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7, localhost, partition 0, ANY, 5368 bytes)
+20/06/16 21:13:13 INFO Executor: Running task 0.0 in stage 7.0 (TID 7)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 192.168.10.126:50189 in memory (size: 2012.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO HadoopRDD: Input split: hdfs://localhost:9000/major.csv:0+137
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_6_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_7_piece0 on 192.168.10.126:50189 in memory (size: 2013.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.6 MB)
+20/06/16 21:13:13 INFO Executor: Finished task 0.0 in stage 7.0 (TID 7). 954 bytes result sent to driver
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 192.168.10.126:50189 in memory (size: 2012.0 B, free: 2004.6 MB)
+20/06/16 21:13:13 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 19 ms on localhost (1/1)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+20/06/16 21:13:13 INFO DAGScheduler: ResultStage 7 (csv at FirstController.java:56) finished in 0.020 s
+20/06/16 21:13:13 INFO DAGScheduler: Job 7 finished: csv at FirstController.java:56, took 0.038756 s
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_10_piece0 on 192.168.10.126:50189 in memory (size: 14.3 KB, free: 2004.6 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_11_piece0 on 192.168.10.126:50189 in memory (size: 2012.0 B, free: 2004.6 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Removed broadcast_13_piece0 on 192.168.10.126:50189 in memory (size: 2007.0 B, free: 2004.6 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 127.2 KB, free 2004.2 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2004.2 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.6 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 16 from csv at FirstController.java:57
+20/06/16 21:13:13 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:13 INFO SparkContext: Starting job: csv at FirstController.java:57
+20/06/16 21:13:13 INFO DAGScheduler: Got job 8 (csv at FirstController.java:57) with 1 output partitions
+20/06/16 21:13:13 INFO DAGScheduler: Final stage: ResultStage 8 (csv at FirstController.java:57)
+20/06/16 21:13:13 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:13 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:13 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[33] at csv at FirstController.java:57), which has no missing parents
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 3.3 KB, free 2004.2 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 2013.0 B, free 2004.2 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on 192.168.10.126:50189 (size: 2013.0 B, free: 2004.6 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:13 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[33] at csv at FirstController.java:57)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+20/06/16 21:13:13 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8, localhost, partition 0, ANY, 5375 bytes)
+20/06/16 21:13:13 INFO Executor: Running task 0.0 in stage 8.0 (TID 8)
+20/06/16 21:13:13 INFO HadoopRDD: Input split: hdfs://localhost:9000/student_data.csv:0+2093675
+20/06/16 21:13:13 INFO Executor: Finished task 0.0 in stage 8.0 (TID 8). 1021 bytes result sent to driver
+20/06/16 21:13:13 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 12 ms on localhost (1/1)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+20/06/16 21:13:13 INFO DAGScheduler: ResultStage 8 (csv at FirstController.java:57) finished in 0.015 s
+20/06/16 21:13:13 INFO DAGScheduler: Job 8 finished: csv at FirstController.java:57, took 0.023464 s
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 127.2 KB, free 2004.1 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2004.0 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 18 from csv at FirstController.java:57
+20/06/16 21:13:13 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:13 INFO SparkContext: Starting job: csv at FirstController.java:57
+20/06/16 21:13:13 INFO DAGScheduler: Got job 9 (csv at FirstController.java:57) with 1 output partitions
+20/06/16 21:13:13 INFO DAGScheduler: Final stage: ResultStage 9 (csv at FirstController.java:57)
+20/06/16 21:13:13 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:13 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:13 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[36] at csv at FirstController.java:57), which has no missing parents
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 3.3 KB, free 2004.0 MB)
+20/06/16 21:13:13 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 2013.0 B, free 2004.0 MB)
+20/06/16 21:13:13 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on 192.168.10.126:50189 (size: 2013.0 B, free: 2004.5 MB)
+20/06/16 21:13:13 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:13 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[36] at csv at FirstController.java:57)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks
+20/06/16 21:13:13 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9, localhost, partition 0, ANY, 5375 bytes)
+20/06/16 21:13:13 INFO Executor: Running task 0.0 in stage 9.0 (TID 9)
+20/06/16 21:13:13 INFO HadoopRDD: Input split: hdfs://localhost:9000/student_data.csv:0+2093675
+20/06/16 21:13:13 INFO Executor: Finished task 0.0 in stage 9.0 (TID 9). 1021 bytes result sent to driver
+20/06/16 21:13:13 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 24 ms on localhost (1/1)
+20/06/16 21:13:13 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+20/06/16 21:13:13 INFO DAGScheduler: ResultStage 9 (csv at FirstController.java:57) finished in 0.025 s
+20/06/16 21:13:13 INFO DAGScheduler: Job 9 finished: csv at FirstController.java:57, took 0.043206 s
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 127.2 KB, free 2003.9 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.9 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 20 from csv at FirstController.java:58
+20/06/16 21:13:14 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:14 INFO SparkContext: Starting job: csv at FirstController.java:58
+20/06/16 21:13:14 INFO DAGScheduler: Got job 10 (csv at FirstController.java:58) with 1 output partitions
+20/06/16 21:13:14 INFO DAGScheduler: Final stage: ResultStage 10 (csv at FirstController.java:58)
+20/06/16 21:13:14 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:14 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:14 INFO DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[40] at csv at FirstController.java:58), which has no missing parents
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 3.3 KB, free 2003.9 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 2012.0 B, free 2003.9 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on 192.168.10.126:50189 (size: 2012.0 B, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[40] at csv at FirstController.java:58)
+20/06/16 21:13:14 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+20/06/16 21:13:14 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10, localhost, partition 0, ANY, 5374 bytes)
+20/06/16 21:13:14 INFO Executor: Running task 0.0 in stage 10.0 (TID 10)
+20/06/16 21:13:14 INFO HadoopRDD: Input split: hdfs://localhost:9000/school_data.csv:0+78546
+20/06/16 21:13:14 INFO Executor: Finished task 0.0 in stage 10.0 (TID 10). 993 bytes result sent to driver
+20/06/16 21:13:14 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 36 ms on localhost (1/1)
+20/06/16 21:13:14 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+20/06/16 21:13:14 INFO DAGScheduler: ResultStage 10 (csv at FirstController.java:58) finished in 0.038 s
+20/06/16 21:13:14 INFO DAGScheduler: Job 10 finished: csv at FirstController.java:58, took 0.052681 s
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 127.2 KB, free 2003.8 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 14.3 KB, free 2003.8 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on 192.168.10.126:50189 (size: 14.3 KB, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 22 from csv at FirstController.java:58
+20/06/16 21:13:14 INFO FileInputFormat: Total input paths to process : 1
+20/06/16 21:13:14 INFO SparkContext: Starting job: csv at FirstController.java:58
+20/06/16 21:13:14 INFO DAGScheduler: Got job 11 (csv at FirstController.java:58) with 1 output partitions
+20/06/16 21:13:14 INFO DAGScheduler: Final stage: ResultStage 11 (csv at FirstController.java:58)
+20/06/16 21:13:14 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:14 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:14 INFO DAGScheduler: Submitting ResultStage 11 (MapPartitionsRDD[43] at csv at FirstController.java:58), which has no missing parents
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 3.3 KB, free 2003.7 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 2012.0 B, free 2003.7 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on 192.168.10.126:50189 (size: 2012.0 B, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 23 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:14 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (MapPartitionsRDD[43] at csv at FirstController.java:58)
+20/06/16 21:13:14 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+20/06/16 21:13:14 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11, localhost, partition 0, ANY, 5374 bytes)
+20/06/16 21:13:14 INFO Executor: Running task 0.0 in stage 11.0 (TID 11)
+20/06/16 21:13:14 INFO HadoopRDD: Input split: hdfs://localhost:9000/school_data.csv:0+78546
+20/06/16 21:13:14 INFO Executor: Finished task 0.0 in stage 11.0 (TID 11). 993 bytes result sent to driver
+20/06/16 21:13:14 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 19 ms on localhost (1/1)
+20/06/16 21:13:14 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+20/06/16 21:13:14 INFO DAGScheduler: ResultStage 11 (csv at FirstController.java:58) finished in 0.021 s
+20/06/16 21:13:14 INFO DAGScheduler: Job 11 finished: csv at FirstController.java:58, took 0.034053 s
+20/06/16 21:13:14 INFO SparkSqlParser: Parsing command: major
+20/06/16 21:13:14 INFO SparkSqlParser: Parsing command: student
+20/06/16 21:13:14 INFO SparkSqlParser: Parsing command: school
+20/06/16 21:13:14 INFO SparkSqlParser: Parsing command: select * from student
+102
+20/06/16 21:13:14 INFO FileSourceStrategy: Pruning directories with: 
+20/06/16 21:13:14 INFO FileSourceStrategy: Post-Scan Filters: 
+20/06/16 21:13:14 INFO FileSourceStrategy: Pruned Data Schema: struct<stud_id: string, first_name: string, last_name: string, birthday: string, gender: string ... 9 more fields>
+20/06/16 21:13:14 INFO FileSourceStrategy: Pushed Filters: 
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 132.0 KB, free 2003.6 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 14.7 KB, free 2003.6 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on 192.168.10.126:50189 (size: 14.7 KB, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 24 from explain at FirstController.java:74
+20/06/16 21:13:14 INFO FileSourceStrategy: Planning scan with bin packing, max size: 6287979 bytes, open cost is considered as scanning 4194304 bytes.
+20/06/16 21:13:14 INFO FileSourceStrategy: Pruning directories with: 
+20/06/16 21:13:14 INFO FileSourceStrategy: Post-Scan Filters: 
+20/06/16 21:13:14 INFO FileSourceStrategy: Pruned Data Schema: struct<stud_id: string, first_name: string, last_name: string, birthday: string, gender: string ... 9 more fields>
+20/06/16 21:13:14 INFO FileSourceStrategy: Pushed Filters: 
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 132.0 KB, free 2003.5 MB)
+20/06/16 21:13:14 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 14.7 KB, free 2003.5 MB)
+20/06/16 21:13:14 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on 192.168.10.126:50189 (size: 14.7 KB, free: 2004.5 MB)
+20/06/16 21:13:14 INFO SparkContext: Created broadcast 25 from show at FirstController.java:75
+20/06/16 21:13:14 INFO FileSourceStrategy: Planning scan with bin packing, max size: 6287979 bytes, open cost is considered as scanning 4194304 bytes.
+20/06/16 21:13:15 INFO CodeGenerator: Code generated in 448.665 ms
+20/06/16 21:13:15 INFO SparkContext: Starting job: show at FirstController.java:75
+20/06/16 21:13:15 INFO DAGScheduler: Got job 12 (show at FirstController.java:75) with 1 output partitions
+20/06/16 21:13:15 INFO DAGScheduler: Final stage: ResultStage 12 (show at FirstController.java:75)
+20/06/16 21:13:15 INFO DAGScheduler: Parents of final stage: List()
+20/06/16 21:13:15 INFO DAGScheduler: Missing parents: List()
+20/06/16 21:13:15 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[51] at show at FirstController.java:75), which has no missing parents
+20/06/16 21:13:15 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 8.3 KB, free 2003.5 MB)
+20/06/16 21:13:15 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 4.5 KB, free 2003.4 MB)
+20/06/16 21:13:15 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on 192.168.10.126:50189 (size: 4.5 KB, free: 2004.5 MB)
+20/06/16 21:13:15 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1012
+20/06/16 21:13:15 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[51] at show at FirstController.java:75)
+20/06/16 21:13:15 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
+20/06/16 21:13:15 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12, localhost, partition 0, ANY, 5795 bytes)
+20/06/16 21:13:15 INFO Executor: Running task 0.0 in stage 12.0 (TID 12)
+20/06/16 21:13:15 INFO FileScanRDD: Reading File path: hdfs://localhost:9000/student_data.csv, range: 0-2093675, partition values: [empty row]
+20/06/16 21:13:15 INFO CodeGenerator: Code generated in 91.5739 ms
+20/06/16 21:13:15 INFO Executor: Finished task 0.0 in stage 12.0 (TID 12). 3875 bytes result sent to driver
+20/06/16 21:13:15 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 232 ms on localhost (1/1)
+20/06/16 21:13:15 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+20/06/16 21:13:15 INFO DAGScheduler: ResultStage 12 (show at FirstController.java:75) finished in 0.234 s
+20/06/16 21:13:15 INFO DAGScheduler: Job 12 finished: show at FirstController.java:75, took 0.300138 s
+20/06/16 21:13:15 INFO CodeGenerator: Code generated in 58.8236 ms

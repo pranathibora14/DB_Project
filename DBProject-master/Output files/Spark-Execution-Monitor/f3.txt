@@ -1,2 +1,2 @@
 == Optimized Logical Plan ==
-Relation[school_id#92,school_name#93,school_email#94,school_phone#95,street#96,city#97,state#98,zip_code#99] csv
+Relation[stud_id#58,first_name#59,last_name#60,birthday#61,gender#62,age#63,stud_email#64,stud_phone#65,stud_address#66,school_id#67,major_id#68] csv
