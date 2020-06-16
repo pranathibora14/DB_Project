@@ -14,6 +14,7 @@ private String query_str=" ";
     private String f4=" ";
     private String f5=" ";
     private String validation=" ";
+    private long time=0;
 
 
 
@@ -73,5 +74,14 @@ private String query_str=" ";
 
     public void setValidation(String validation) {
         this.validation = validation;
+    }
+
+
+    public long getTime() {
+        return time;
+    }
+
+    public void setTime(long time) {
+        this.time = time;
     }
 }

@@ -1,8 +1,25 @@
-+--------+----------+---------------+
-|major_id|major_name|course_duration|
-+--------+----------+---------------+
-|       1|  computer|              4|
-|       2|mechanical|              5|
-|       3|    ciivil|              5|
-|       4|        BA|              3|
-+--------+----------+---------------+
++---------+----------------+--------------------+--------------+-------------+---------+-----+--------+
+|school_id|     school_name|        school_email|  school_phone|       street|     city|state|zip_code|
++---------+----------------+--------------------+--------------+-------------+---------+-----+--------+
+|        1|Gerald Armstrong|         za@mieti.fr|(985) 390-1175|   Zodi River|  Dabweru|   NV|   17933|
+|        2|   Lenora Ramsey|         ipbem@ak.sm|(778) 372-6930| Wijan Square| Gibkildo|   MT|   33520|
+|        3|  Elizabeth Gill| soijoma@wusnewup.gi|(228) 819-8998|   Bohez Pass|  Uwduzuc|   IA|   30502|
+|        4|       Luis Lowe|     libwugki@obo.gl|(323) 971-9432|   Zofo Grove| Obuowwiw|   IA|   51785|
+|        5|     Derek Silva|puujakeg@soluzsej.tr|(403) 281-4563|Zopci Highway|Hewkihrah|   NV|   33101|
+|        6|       Julia Lee|    banjo@esuweuz.ee|(505) 999-3481|Wokse Heights|  Ebtivja|   NY|   12639|
+|        7|      Leila Owen|           nof@hi.md|(652) 308-2947|   Lisat Pike| Dugutpom|   VT|   11519|
+|        8|     Lou Hopkins|      pe@deflibos.lb|(656) 812-3438|  Efegis Glen|Pedlilujo|   IN|   32260|
+|        9|   Lettie French|          ki@bool.pa|(336) 952-2305|Digud Parkway|  Nepafke|   WY|   28559|
+|       10|     Bertie Tran|     he@mawnijrob.im|(270) 828-8021|    Guze Mill|  Edotija|   MO|   00603|
+|       11|Lizzie Carpenter|    epaakma@nikzu.zm|(329) 481-5283|   Ciwer Loop|   Dulaja|   NH|   88115|
+|       12|Sophie Armstrong|         jooki@ka.ci|(884) 964-8864| Polufe Grove|  Bacgiez|   VA|   22692|
+|       13|  Derrick Romero|            id@ha.nl|(774) 812-7821|    Tiga Lane|  Kihegsa|   CA|   09696|
+|       14|    Eric Alvarez|         taup@ehi.us|(307) 983-6906|  Vizeg Court| Ifiidziz|   LA|   58909|
+|       15|    Ellen Ortega|       gooji@avvi.ke|(718) 697-8003|  Avewi Manor|  Ifaurob|   WY|   31671|
+|       16|    Ralph Bowman|   juretbov@jahoc.li|(817) 399-4493|   Dani Court|Esozeddec|   SC|   99145|
+|       17|     Troy Morgan|     okirazot@cor.ng|(661) 272-3568|  Kufugi Pass|  Ejboane|   NJ|   48387|
+|       18|Catherine Norman|pozrumfoh@dawfunl...|(482) 499-9580|   Peefe Pass| Peicubos|   AR|   41801|
+|       19|     Barry Munoz|kivkaro@nerrijico.pt|(482) 422-3561|   Rirko Park|  Ebcurte|   MN|   90968|
+|       20| Dylan Wilkerson|      ropihsok@di.vi|(267) 693-7248|    Ekci Loop| Juehijed|   NH|   98557|
++---------+----------------+--------------------+--------------+-------------+---------+-----+--------+
+only showing top 20 rows

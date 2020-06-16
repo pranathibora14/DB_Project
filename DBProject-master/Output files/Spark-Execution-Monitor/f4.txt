@@ -1,4 +1,2 @@
 == Physical Plan ==
-*Project [major_id#111, major_name#112, course_duration#113]
-+- *Filter (isnotnull(major_id#111) && (cast(major_id#111 as double) < 5.0))
-   +- *Scan csv [major_id#111,major_name#112,course_duration#113] Format: CSV, InputPaths: hdfs://localhost:9000/major.csv, PushedFilters: [IsNotNull(major_id)], ReadSchema: struct<major_id:string,major_name:string,course_duration:string>
+*Scan csv [school_id#92,school_name#93,school_email#94,school_phone#95,street#96,city#97,state#98,zip_code#99] Format: CSV, InputPaths: hdfs://localhost:9000/school_data.csv, PushedFilters: [], ReadSchema: struct<school_id:string,school_name:string,school_email:string,school_phone:string,street:string,...

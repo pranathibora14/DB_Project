@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
@@ -63,9 +64,13 @@ public class FirstController {
         try {
          //   SparkSqlParser sparksqlparser = new SparkSqlParser(new SQLConf());
         //    sparksqlparser.parseExpression(query);
-            sqldf = ss.sql(submitted_query);
 
-            
+            long startTime=System.nanoTime();
+            sqldf=ss.sql(submitted_query);
+            long endTime=System.nanoTime();
+            long timems= TimeUnit.NANOSECONDS.toMillis(endTime-startTime);
+            System.out.println(timems);
+            query.setTime(timems);
             sqldf.explain(true);
             sqldf.show();
         } catch (Exception e) {
