@@ -50,3 +50,28 @@ body{
 .dbguide{
     margin-top:5%;
 }
+table{
+    color:floralwhite;
+    border-color: floralwhite;
+    border-style: solid;
+    padding:5px;
+}
+th{
+    color:black;
+    border: 3px solid white;
+    padding:5px;
+    background-color: aliceblue;
+    text-align: center;
+}
+td{
+    border:3px solid floralwhite;
+    padding:5px;
+    color: floralwhite;
+    align:center;
+    text-align: center;
+}
+.info_table{
+    color:whitesmoke;
+    font-size:15px;
+    align:center;
+}
