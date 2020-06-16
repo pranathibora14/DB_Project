@@ -1,7 +1,7 @@
 import org.apache.spark.{SparkConf, SparkContext, sql}
 import org.apache.spark.sql.{SQLContext, SparkSession}
 import org.spark_project.jetty.util.ReadLineInputStream
-object HelloWorld {
+object Script2 {
   def main(args: Array[String]): Unit = {
     val spark=new sql.SparkSession.Builder()
     val SparkConf = new SparkConf().setAppName("app").setMaster("local[3]")
@@ -12,8 +12,7 @@ object HelloWorld {
     val df1=df.repartition(df.col("school_id"))
     val df2=df1.select("school_id", "first_name", "last_name").groupBy(df1.col("school_id")).count().sort(df1.col("school_id"))
     df2.show()
-    println("Hello World!")
-    val name=readLine("What's your name?")
-
+    println("Successful Execution")
+    val name=readLine("Please enter a key to stop spark job: ")
   }
 }
