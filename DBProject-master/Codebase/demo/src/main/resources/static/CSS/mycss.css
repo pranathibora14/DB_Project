@@ -1,0 +1,49 @@
+body{
+    background: #2f294f;
+}
+.fireflies{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    background:#2f294f;
+    margin:0;
+}
+#note{
+    position:absolute;
+    color:rgba(249,241,204,1);
+    left:0;
+    right:0;
+    bottom:20px;
+    margin:auto;
+    text-align:center;
+    user-select:none;
+    font-family:Arial;
+}
+.welcome{
+    margin-left:20%;
+    margin-top:5%;
+    color:white;
+    font-family: 'Noto Serif',serif;
+}
+.welcome_title{
+    color:floralwhite;
+    font-family: 'Noto Serif',Serif;
+}
+.buttons{
+    color:black;
+    font-family: Arial;
+}
+.txt{
+    color:whitesmoke;
+    font-size: 20px;
+}
+
+#box_text{
+    color:black;
+    background-color: whitesmoke;
+    width:30%;
+    font-size:20px;
+}
+.results{
+    margin:5%;
+}

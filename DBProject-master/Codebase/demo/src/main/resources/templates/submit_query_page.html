@@ -1,0 +1,29 @@
+
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Submit Query</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="CSS/mycss.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1 align="center" class="welcome_title">Welcome to SparkSQL Query Execution!</h1>
+
+<!--/*@thymesVar id="greeting" type="com.example.demo.Greeting"*/-->
+<div style="text-align: center;"   class="form-group">
+<form action="#" th:action="@{/semanticAnalysis}" th:object="${query}" method="post">
+    <p></p>
+    <p></p>
+    <p class="txt">Enter Query:</p>
+    <input type="text" th:field="*{query_str}"  class="form-control box" id="box_text" />
+    <!--<p>Message: <input type="text" th:field="*{content}" /></p>-->
+    <p></p>
+    <p><input type="submit" align="center" value="Submit" class="btn btn-info btn-secondary buttons " /> <input type="reset" align="center" value="Reset" class="btn btn-info btn-secondary buttons"  /></p>
+</form>
+</div>
+
+</body>
+</html>

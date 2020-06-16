@@ -3,11 +3,11 @@ package com.example.demo;
 import javax.inject.Singleton;
 import java.lang.reflect.Array;
 
-public class Greeting {
+public class Query {
 
     //private long id;
 
-private String query=" ";
+private String query_str=" ";
     private String f1=" ";
     private String f2="";
     private String f3=" ";
@@ -16,20 +16,14 @@ private String query=" ";
     private String validation=" ";
 
 
-    /*public long getId() {
-        return id;
+
+
+    public String getQuery_str() {
+        return query_str;
     }
 
-    public void setId(long id) {
-        this.id = id;
-    }*/
-
-    public String getQuery() {
-        return query;
-    }
-
-    public void setQuery(String query) {
-        this.query = query;
+    public void setQuery_str(String query_str) {
+        this.query_str = query_str;
     }
 
     public String getF1() {
