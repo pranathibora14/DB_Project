@@ -46,6 +46,10 @@ public class FirstController {
     public String submitQuery(Query query) throws IOException {
        int flag1=0;
         String submitted_query =query.getQuery_str();
+        if(submitted_query.contains("insert")||submitted_query.contains("delete")||submitted_query.contains("update")||submitted_query.contains("alter"))
+        {
+            flag1=2;
+        }
         PrintWriter writer = new PrintWriter("C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\output.txt");
         writer.print("");
         SparkSession ss = SparkSession.builder().config("spark.sql.warehouse.dir", "file:///tmp/spark-warehouse").master("local").getOrCreate();
@@ -63,16 +67,17 @@ public class FirstController {
         Dataset<Row> sqldf = null;
         try {
          //   SparkSqlParser sparksqlparser = new SparkSqlParser(new SQLConf());
-        //    sparksqlparser.parseExpression(query);
-
-            long startTime=System.nanoTime();
-            sqldf=ss.sql(submitted_query);
-            long endTime=System.nanoTime();
-            long timems= TimeUnit.NANOSECONDS.toMillis(endTime-startTime);
-            System.out.println(timems);
-            query.setTime(timems);
-            sqldf.explain(true);
-            sqldf.show();
+        //    sparksqlparser.parseE
+            if(flag1==0) {
+                long startTime = System.nanoTime();
+                sqldf = ss.sql(submitted_query);
+                long endTime = System.nanoTime();
+                long timems = TimeUnit.NANOSECONDS.toMillis(endTime - startTime);
+                System.out.println(timems);
+                query.setTime(timems);
+                sqldf.explain(true);
+                sqldf.show();
+            }
         } catch (Exception e) {
            flag1=1;
             System.out.println("INVALID QUERY");
@@ -170,10 +175,14 @@ public class FirstController {
                e.printStackTrace();
            }
        }
-       else
+       else if(flag1==1)
        {
            query.setValidation("INVALID:Please enter a VALID QUERY");
        }
+       else if(flag1==2)
+        {
+            query.setValidation("Changing the database is not allowed");
+        }
            return (submitted_query);
 
     }
