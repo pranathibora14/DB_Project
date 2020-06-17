@@ -13,6 +13,7 @@ private String query_str=" ";
     private String f3=" ";
     private String f4=" ";
     private String f5=" ";
+    private String tips="";
     private String validation=" ";
     private long time=0;
 
@@ -84,4 +85,13 @@ private String query_str=" ";
     public void setTime(long time) {
         this.time = time;
     }
+
+    public String getTips() {
+        return tips;
+    }
+
+    public void setTips(String tips) {
+        this.tips = tips;
+    }
+
 }

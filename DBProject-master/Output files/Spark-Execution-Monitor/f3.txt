@@ -1,2 +1,3 @@
 == Optimized Logical Plan ==
-Relation[stud_id#7,first_name#8,last_name#9,birthday#10,gender#11,age#12,stud_email#13,stud_phone#14,stud_address#15,school_id#16,major_id#17] csv
+Filter (isnotnull(stud_id#155) && (cast(stud_id#155 as double) > 1000.0))
++- Relation[stud_id#155,first_name#156,last_name#157,birthday#158,gender#159,age#160,stud_email#161,stud_phone#162,stud_address#163,school_id#164,major_id#165] csv

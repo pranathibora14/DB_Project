@@ -18,20 +18,16 @@ import java.util.concurrent.TimeUnit;
 @CrossOrigin(origins = "http://localhost:3000")
 @Controller
 public class FirstController {
+        @GetMapping("/contactUs")
+        public String ContactUs(){return "contact_us";}
+
+        @GetMapping("/userGuide")
+            public String UserGuide(){return "user_guide";
+        }
         @GetMapping("/")
         public String HomePage(){
             return "home_page";
         }
-
-        @GetMapping("/userGuide")
-        public String UserGuide(){return "user_guide";}
-
-        @GetMapping("/contactUs")
-        public String ContactUs(){return "contact_us";}
-
-        @GetMapping("/aboutUs")
-        public String AboutUs(){return "about_us";}
-
         @GetMapping("/submitQuery")
         public String SubmitQueryForm(Model model) {
             model.addAttribute("query", new Query());
@@ -92,7 +88,49 @@ public class FirstController {
            flag1=1;
             System.out.println("INVALID QUERY");
         }
-
+        if(submitted_query.contains("join"))
+        {
+            String t1="Joins\n" +
+                    "1. Join is one of the costliest operations in Spark. You can get rid of duplicate keys in order to shrink the data size and make join operations much faster!\n" +
+                    "2. If you have a defined subset of keys that you are going to use after joining, it may be a good idea to filter out and reduce the rows avoiding a big shuffle of data. This can save time since you will ultimately throw out the redundant data anyway!\n" +
+                    "3. In operations consisting of sensitive data, if you are not sure whether there are matching keys in both tables, it can be safer to use an outer join since no data wil be lost!\n" +
+                    "4. BroadcastHashJoin is an effective join strategy when one of the tables is much smaller (<10MB) than the other. You can forcibly induce a BroadcastHashJoin by giving hints or setting the autoBroadcastJoinThreshold to the table size!\n" +
+                    "5. You can induce a BroadcastHashJoin by using the broadcast() function!\n" +
+                    "6. You can change the threshold value for the table size by setting autoBroadcastJoinThreshold to the desired size. Setting this parameter to -1 will disable BroadcastHashJoin, making SortMergeJoin the default!\n" +
+                    "7. SortMergeJoin is an effective join strategy when both tables are of comparable sizes.\n" +
+                    "8. You can forcibly induce a SortMergeJoin by setting the autoBroadcastJoinThreshold to -1!\n" +
+                    "9. You can disable SortMergeJoins by setting the preferSortMergeJoin parameter to false!\n" +
+                    "10. Joining more than two tables in Spark can be tricky. SortMergeJoin seems to give better runtime performance in this case!\n" +
+                    "11. Ensuring that the dataframe is distributed uniformly on the data column helps to leverage parallelism as all the rows having the same value for the join key are stored in the same partition. Therefore, the dataframe having an adequate number of unique keys can boost performance! ";
+            query.setTips(query.getTips()+t1);
+        }
+        if(submitted_query.contains("group by")||submitted_query.contains("GROUP BY"))
+        {
+            String t1="\nGroupBy\n" +
+                    "1. GroupBy queries can be improved by tuning the number of partitions. It can lead to a significant performance improvement since it is a costly operation!\n" +
+                    "2. The default number of partitions for aggregations is 200 in Spark. Try tuning this value to get an improved performance!\n" +
+                    "3. If you have less distinct keys, then you can try repartitioning the data to less than 200 partitions. This can boost performance provided that the data for a key fits in one partition!\n" +
+                    "4. You can repartition the data on a column value if you are planning on performing multiple complex aggregation functions and joins on the same column. This leads to lesser shuffles of data as the data is already shuffled on the required key!\n" +
+                    "5. You can also use repartition along with an expression to be performed like groupBy. The data gets shuffled accoring to the groupBy expression!\n" +
+                    "6. If you don't want to use the repartition function, you can also set the SHUFFLE_PARTITIONS property to the desired number of partitions!\n" +
+                    "7. GroupBy with RDDs is not optimized. If you're using groupBy with DataFrames you're pretty much good to go!\n";
+            query.setTips(query.getTips()+t1);
+        }
+        if(submitted_query.contains("order by")||submitted_query.contains("ORDER BY"))
+        {
+            String t1="\nOrderBy\n" +
+                    "1. You can also sort data locally in partitions by using the sortWithinPartitions() method!\n" +
+                    "2. With a large enough dataset, we can make sort merge joins faster by repartitioning the data on the join key and then calling sortWithinPartitions on the dataframe!\n";
+            query.setTips(query.getTips()+t1);
+        }
+        if(submitted_query.contains("where")||submitted_query.contains("WHERE"))
+        {
+            String t1="Filters\n" +
+                    "1. Always filter your data before applying any complex operations. This reduces the amount of data to be operated upon!\n" +
+                    "2. It is a good practice to write filters first, although the Catalyst optimizer ensures that filters are executed before any operations. These are called pushdown filters!\n" +
+                    "3. Always try to club filter functions together instead of writing consecutive filters. This saves a step for the Catalyst optimizer!";
+            query.setTips(query.getTips()+t1);
+        }
          //sqldf.write().format("com.databricks.spark.csv").saveAsTable("t1");
 
          //; save("C:\\Users\\Administrator\\Desktop\\Project\\DB-Project\\DBProject-master\\Output files\\Spark-Execution-Monitor\\f5.txt");
