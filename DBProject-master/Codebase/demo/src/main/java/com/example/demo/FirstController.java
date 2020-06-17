@@ -19,9 +19,19 @@ import java.util.concurrent.TimeUnit;
 @Controller
 public class FirstController {
         @GetMapping("/")
-        public String HomePage(Model model){
+        public String HomePage(){
             return "home_page";
         }
+
+        @GetMapping("/userGuide")
+        public String UserGuide(){return "user_guide";}
+
+        @GetMapping("/contactUs")
+        public String ContactUs(){return "contact_us";}
+
+        @GetMapping("/aboutUs")
+        public String AboutUs(){return "about_us";}
+
         @GetMapping("/submitQuery")
         public String SubmitQueryForm(Model model) {
             model.addAttribute("query", new Query());

@@ -75,3 +75,30 @@ td{
     font-size:15px;
     align:center;
 }
+
+.guides{
+    color:floralwhite;
+    align:center;
+    margin: 5%;
+    margin-top: 1%;
+    border: double 5px floralwhite;
+}
+.Titles{
+    font-size: 30px;
+    color:white;
+    text-align:center;
+
+}
+p{
+    font-size:16px;
+}
+.contact_details{
+    margin:10px;
+    border:solid 5px floralwhite;
+    color:white;
+}
+.contact_box{
+    margin-top:10%;
+    text-align: center;
+    color:white;
+}
