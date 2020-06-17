@@ -1,3 +1,4 @@
 == Parsed Logical Plan ==
-'Project [*]
-+- 'UnresolvedRelation `student`
+'Aggregate ['major_id], ['major_id, unresolvedalias('count('first_name), None)]
++- 'Filter ('stud_id < 10)
+   +- 'UnresolvedRelation `student`

@@ -14,16 +14,19 @@
             var e = document.getElementById("rtime");
             var x = document.getElementById("planbt");
             var y = document.getElementById("res");
+            var t= document.getElementById("tip");
             if (x.style.display === "none") {
                 x.style.display = "block";
                 y.style.display ="none";
                 e.style.display="none";
+                t.style.display="none";
             } else {
                 x.style.display = "none";
             }
         }
 
         function myFunction1() {
+            var t= document.getElementById("tip");
             var x = document.getElementById("res");
             var y = document.getElementById("planbt");
             var a= document.getElementById("ulp");
@@ -39,12 +42,14 @@
                 c.style.display ="none";
                 d.style.display ="none";
                 e.style.display="none";
+                t.style.display="none";
             } else {
                 x.style.display = "none";
             }
         }
 
         function rtime() {
+            var t= document.getElementById("tip");
             var x = document.getElementById("rtime");
             var e = document.getElementById("res");
             var y = document.getElementById("planbt");
@@ -60,6 +65,7 @@
                 b.style.display ="none";
                 c.style.display ="none";
                 d.style.display ="none";
+                t.style.display="none";
             } else {
                 x.style.display = "none";
             }
@@ -70,6 +76,7 @@
             var e = document.getElementById("rtime");
             //var y = document.getElementById("myDIV");
             var z =document.getElementById("ulp");
+            var t =document.getElementById("tip");
             var a =document.getElementById("rlp");
             var b =document.getElementById("olp");
             var c =document.getElementById("pp")
@@ -80,6 +87,7 @@
                 e.style.display="none";
                 b.style.display ="none";
                 c.style.display ="none";
+                t.style.display="none";
             } else {
                 z.style.display = "none";
             }
@@ -91,6 +99,7 @@
             var e = document.getElementById("rtime");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
+            var t =document.getElementById("tip");
             var b =document.getElementById("olp");
             var c =document.getElementById("pp")
             if (a.style.display === "none") {
@@ -100,6 +109,7 @@
                 c.style.display ="none";
                 z.style.display ="none";
                 e.style.display="none";
+                t.style.display="none";
             } else {
                 a.style.display = "none";
             }
@@ -107,6 +117,7 @@
         function olp() {
             var x = document.getElementById("res");
             //var y = document.getElementById("myDIV");
+            var t =document.getElementById("tip");
             var e = document.getElementById("rtime");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
@@ -119,6 +130,7 @@
                 e.style.display="none";
                 x.style.display ="none";
                 c.style.display ="none";
+                t.style.display="none";
             } else {
                 b.style.display = "none";
             }
@@ -126,6 +138,7 @@
         function pp() {
             var x = document.getElementById("res");
             var e = document.getElementById("rtime");
+            var t =document.getElementById("tip");
             //var y = document.getElementById("myDIV");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
@@ -138,10 +151,35 @@
                 b.style.display ="none";
                 e.style.display="none";
                 z.style.display ="none";
+                t.style.display="none";
             } else {
                 c.style.display = "none";
             }
         }
+
+        function tip() {
+            var x = document.getElementById("tip");
+            var t =document.getElementById("res");
+            var e = document.getElementById("rtime");
+            //var y = document.getElementById("myDIV");
+            var z =document.getElementById("ulp");
+            var a =document.getElementById("rlp");
+            var b =document.getElementById("olp");
+            var c =document.getElementById("pp")
+            if (x.style.display === "none") {
+                c.style.display = "none";
+                t.style.display ="none";
+                a.style.display ="none";
+                b.style.display ="none";
+                e.style.display="none";
+                z.style.display ="none";
+                x.style.display="block";
+
+            } else {
+                x.style.display = "none";
+            }
+        }
+
         function redirect(){
             var url= "http://localhost:8080/submitQuery";
             window.location.replace(url);
@@ -176,6 +214,7 @@
 <div style="text-align: center" >
 <button onclick="myFunction1()" align="center" class="btn btn-info buttons">Query Output</button>
 <button onclick="myFunction()" align="center" class="btn btn-info buttons">Semantic Analysis</button>
+    <button onclick="tip()" align="center" class="btn btn-info buttons">Optimization tips</button>
 <!--<button onclick="redirect()" class="btn btn-info">Submit Another Query</button>-->
     <button onclick="rtime()" class="btn btn-info buttons">Run Time</button>
     <button onclick="sparkui()" class="btn btn-info buttons">Spark UI</button>
@@ -193,7 +232,7 @@
 
 </div>
 
-<div id="rtime" align="center" style="display: none" class="results">
+<div id="rtime" align="center" style="display: none">
     <h2 class="txt">Query Run Time</h2>
     <pre th:text="${query.time} + ms " style="font-size: medium" class="results"/>
 </div>
@@ -213,6 +252,11 @@
         <h2 class="txt">Physical Plan</h2>
         <pre th:text="${query.f4}" style="font-size: medium" class="results"/>
     </div>
+
+  <div id="tip" style="display: none" align="center">
+    <h2 class="txt">Optimization tips</h2>
+    <pre th:text=" ${query.tips}" style="font-size: medium" class="results"/>
+</div>
 </div>
 <div id="res" style="display: none" align="center" class="results">
 <pre th:text="${query.f5}"  />

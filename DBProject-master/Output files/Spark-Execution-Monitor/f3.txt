@@ -1,2 +1,5 @@
 == Optimized Logical Plan ==
-Relation[stud_id#7,first_name#8,last_name#9,birthday#10,gender#11,age#12,stud_email#13,stud_phone#14,stud_address#15,school_id#16,major_id#17] csv
+Aggregate [major_id#91], [major_id#91, count(first_name#82) AS count(first_name)#133L]
++- Project [first_name#82, major_id#91]
+   +- Filter (isnotnull(stud_id#81) && (cast(stud_id#81 as double) < 10.0))
+      +- Relation[stud_id#81,first_name#82,last_name#83,birthday#84,gender#85,age#86,stud_email#87,stud_phone#88,stud_address#89,school_id#90,major_id#91] csv
