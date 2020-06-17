@@ -3,41 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="CSS/mycss.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&family=Roboto&disply=swap" rel="stylesheet">
+
+    <link href="CSS/profile.css" rel="stylesheet">
+
     <link href="CSS/mycss.css" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-    <div class="contact_box">
-        <h1>Contact Us</h1>
-        <br>
-        <h2>Developers</h2>
-    <div class="row">
-        <div class="col contact_details">
-            <h3>Pranathi Bora</h3>
-            <p>Contact No.: +91 88057 32036</p>
-            <p>Email Id :  </p>
-            <p>pranathi.borra@gmail.com</p>
-            <p>Github Profile : </p>
-            <p><a href="https://github.com/pranathibora14/" target="_blank">github.com/pranathibora</a></p>
-            <p>LinkedIn Profile:</p>
-            <p><a href="https://www.linkedin.com/in/pranathi-bora" target="_blank">linkedin.com/pranathi-bora</a> </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/userGuide">User Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/submitQuery">Tool</a>
+                </li>
+
+            </ul>
+
         </div>
-        <div class="col contact_details">
-            <h3>Shivani Patil</h3>
-            <p>Contact No.: +91 84597 31693 </p>
-            <p>Email Id : shivanipatilsp001@gmail.com</p>
-            <p>Github Profile : <a href="https://github.com/shivanipatil209" target="_blank">github.com/shivanipatil209</a></p>
-            <p>LinkedIn Profile: <a href="https://www.linkedin.com/in/shivani-patil209" target="_blank">linkedin.com/shivani-patil-209</a> </p>
+    </nav>
+    <div class="container">
+    <div class="developers">
+        <h3>Developers</h3>
+    </div>
+        <div class="row contact">
+
+        <div class="col-sm contact-card">
+            <div class="contact-card__header-image">
+
+            </div>
+            <p class="contact-card__name">Pranathi Bora</p>
+            <ul>
+                <li class="contact-card__link contact-card__link--email"><a title="Email to Pranathi " href="mailto:"><i class="fa fa-email"></i>&#128241 pranathi.borra@gmail.com</a></li>
+                <li class="contact-card__link contact-card__link--mobile"><a title="Call Pranathi" href="tel:">&#128231 +91 88057 32036</a></li>
+            </ul>
+            <ul class="contact-card__footer">
+                <li class="contact-card__footer__link contact-card__footer__link--twitter"><a title="Link to Pranathi's Github profile" href="https://github.com/pranathibora14" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li class="contact-card__footer__link contact-card__footer__link--linkedin"><a title="Link to Pranathi's LinkedIn profile" href="https://www.linkedin.com/in/pranathi-bora" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+            </ul>
         </div>
-        <div class="col contact_details">
-            <h3>Shivani Mundle</h3>
-            <p>Contact No.: +91 93701 33252</p>
-            <p>Email Id :</p><p> shivanimundle.19@gmail.com</p>
-            <p>Github Profile : </p><p> <a href="https://github.com/Shivani-Mundle" target="_blank"> github.com/Shivani-Mundle</a></p>
-            <p>LinkedIn Profile: </p><p> <a href="https://www.linkedin.com/in/shivani-m-89275b190/" target="_blank">linkedin.com/Shivani-Mundle</a></p>
+
+
+             <div class="col-sm contact-card">
+            <div class="contact-card__header-image">
+
+            </div>
+            <p class="contact-card__name">Shivani Patil</p>
+            <ul>
+                <li class="contact-card__link contact-card__link--email"><a title="Email to Shivani Patil" href="mailto:"><i class="fa fa-email"></i>&#128241 shivanipatilsp001@gmail.com</a></li>
+                <li class="contact-card__link contact-card__link--mobile"><a title="Call Shivani Patil" href="tel:">&#128231 +91 84597 31693</a></li>
+            </ul>
+            <ul class="contact-card__footer">
+                <li class="contact-card__footer__link contact-card__footer__link--twitter"><a title="Link to Shivani's Github profile" href="https://github.com/shivanipatil209" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li class="contact-card__footer__link contact-card__footer__link--linkedin"><a title="Link to Shivani'sLinkedIn profile" href="https://www.linkedin.com/in/shivani-patil209" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+            </ul>
+        </div>
+             <div class="col-sm contact-card">
+            <div class="contact-card__header-image">
+
+            </div>
+            <p class="contact-card__name">Shivani Mundle</p>
+            <ul>
+                <li class="contact-card__link contact-card__link--email"><a title="Email to Shivani Mundle" href="mailto:"><i class="fa fa-email"></i>&#128241 shivanimundle.19@gmail.com</a></li>
+                <li class="contact-card__link contact-card__link--mobile"><a title="Call to Shivani Mundle" href="tel:">&#128231 +91 93701 33252</a></li>
+            </ul>
+            <ul class="contact-card__footer">
+                <li class="contact-card__footer__link contact-card__footer__link--twitter"><a title="Link to Shivani's Github profile" href="https://github.com/Shivani-Mundle" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li class="contact-card__footer__link contact-card__footer__link--linkedin"><a title="Link to Shivani's LinkedIn profile" href="https://www.linkedin.com/in/shivani-m-89275b190" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+            </ul>
         </div>
     </div>
     </div>

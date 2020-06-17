@@ -20,14 +20,16 @@ body{
     font-family:Arial;
 }
 .welcome{
-    margin-left:20%;
-    margin-top:5%;
+    margin-top:1%;
     color:white;
     font-family: 'Noto Serif',serif;
+    text-align:center;
 }
 .welcome_title{
     color:floralwhite;
     font-family: 'Noto Serif',Serif;
+    text-align: center;
+    margin-top:2%;
 }
 .buttons{
     color:black;
@@ -36,6 +38,7 @@ body{
 .txt{
     color:whitesmoke;
     font-size: 20px;
+    font-family: 'Noto Serif', serif;
 }
 
 #box_text{
@@ -80,25 +83,48 @@ td{
     color:floralwhite;
     align:center;
     margin: 5%;
-    margin-top: 1%;
+    margin-top: 3%;
     border: double 5px floralwhite;
+    font-family: 'Merriweather',Serif;
+    font-size: 16px;
 }
 .Titles{
     font-size: 30px;
     color:white;
     text-align:center;
-
+    font-family: 'Roboto', sans-serif;
 }
 p{
-    font-size:16px;
+    font-size:14px;
+    font-family: 'Merriweather',serif;
 }
 .contact_details{
     margin:10px;
     border:solid 5px floralwhite;
     color:white;
 }
-.contact_box{
-    margin-top:10%;
-    text-align: center;
+#jtext{
+    font-size:18px;
+
+}
+.info{
     color:white;
+    margin-left:5%;
+    margin-right:5%;
+    font-family:"Merriweather";
+
+}
+#startbutton{
+    align:right;
+    text-align:right;
+    margin-right:5%;
+}
+.developers{
+    text-align:center;
+    margin-top: 7%;
+    color:white;
+    font-family: 'Noto Serif', serif
+}
+.contact{
+    margin-top:5%;
 }

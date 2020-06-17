@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.5.1/jquery.min.js"></script>
     <script  src="https://maxcdn.bootsrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link href="CSS/mycss.css" rel="stylesheet">
@@ -15,20 +15,45 @@
 <body class="fireflies">
 
 <div class="container">
-    <navbar>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    </navbar>
-    <div class="row">
-        <div class="col-md-8 col-sm-12 col-lg-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/userGuide">User Guide</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/contactUs">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="navbar-brand" href="/submitQuery">Tool</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
             <div class="welcome">
-            <h1 class="welcome_title">Welcome to Semantic Analysis of Spark Queries</h1>
-
-             <a href="http://localhost:8080/submitQuery" align="center"><button class="btn btnprimary btn-large buttons" >Let's get started!</button></a>
+            <h3 class="welcome_title">Welcome to Semantic Analysis of Spark Queries</h3>
+            </div>
+        <br>
+        <div class="info">
+            <p id="jtext" class="lead">The aim of this project is to provide the client with holistic platform
+            for semantic analysis of spark sql queries. Client centricity is one of the important value for us.
+            Hope you enjoy the platform!
+            So, let's get started!</p>
         </div>
+    <div id="startbutton">
+             <a href="/submitQuery" ><button class="btn btn-info buttons" >Let's get started!</button></a>      
         </div>
-    </div>
+    <canvas id="canvas"></canvas>
 </div>
-<canvas id="canvas"></canvas>
+
 </body>
 
 <script src="JS/master.js"></script>
