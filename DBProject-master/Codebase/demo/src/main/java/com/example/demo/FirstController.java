@@ -46,7 +46,7 @@ public class FirstController {
     public String submitQuery(Query query) throws IOException {
        int flag1=0;
         String submitted_query =query.getQuery_str();
-        if(submitted_query.contains("insert")||submitted_query.contains("delete")||submitted_query.contains("update")||submitted_query.contains("alter"))
+        if(submitted_query.contains("insert")||submitted_query.contains("update")||submitted_query.contains("alter")||submitted_query.contains("delete"))
         {
             flag1=2;
         }
@@ -67,7 +67,7 @@ public class FirstController {
         Dataset<Row> sqldf = null;
         try {
          //   SparkSqlParser sparksqlparser = new SparkSqlParser(new SQLConf());
-        //    sparksqlparser.parseE
+        //    sparksqlparser.parseExpression(query);
             if(flag1==0) {
                 long startTime = System.nanoTime();
                 sqldf = ss.sql(submitted_query);
@@ -77,7 +77,7 @@ public class FirstController {
                 query.setTime(timems);
                 sqldf.explain(true);
                 sqldf.show();
-            }
+                }
         } catch (Exception e) {
            flag1=1;
             System.out.println("INVALID QUERY");
@@ -181,7 +181,7 @@ public class FirstController {
        }
        else if(flag1==2)
         {
-            query.setValidation("Changing the database is not allowed");
+            query.setValidation("Making changes to the databases is not permitted:Please submit a VALID Query");
         }
            return (submitted_query);
 

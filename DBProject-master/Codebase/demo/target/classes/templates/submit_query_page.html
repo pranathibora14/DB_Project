@@ -1,5 +1,4 @@
-
-<html xmlns:th="https://www.thymeleaf.org">
+<html xmlns:th="https://www.thymeleaf.org" xmlns:align="http://www.w3.org/1999/xhtml">
 <head>
     <title>Submit Query</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -86,7 +85,6 @@
     <button class="btn btn-info buttons" >Go to User Guide!</button>
 </div>
 <br>
-<br>
 <div id="db_toggler" style="display:none" align="center">
     <button onclick="student_table_toggler()" class="btn btn-info buttons">Student Database</button>
     <button onclick="school_table_toggler()" class="btn btn-info buttons">School Database</button>
@@ -95,19 +93,54 @@
 </div>
 
 <div id="stud" style="display:none" align="center" class="results">
-    <h1>student</h1>
-</div>
-<div id="school" style="display:none" align="center" class="result">
-<table  class="txt" style="border: azure" >
+    <div class="txt">
+    <h1 >Student Database</h1>
+
+    </div>
+    <p class="info_table">Total no of records = 25,000</p>
+        <table >
         <tr>
-            <td>school_id</td>
-            <td>school_name</td>
-            <td>school_email</td>
-            <td>school_phone</td>
-            <td>street</td>
-            <td>city</td>
-            <td>state</td>
-            <td>zip_code</td>
+            <th>stud_id</th><th>first_name</th><th>last_name</th><th>birthday</th><th>gender</th><th>age</th>
+            <th>stud_email</th><th>stud_phone</th><th>stud_address</th><th>school_id</th><th>major_id</th>
+        </tr>
+        <tr>
+            <td>1</td><td>Ellen</td><td>Greer</td><td>3/03/1993</td><td>Female</td><td>27</td>
+            <td>finrikan@jal.en</td><td>(508) 331-2026</td><td>Muomawur</td><td>741</td><td>6</td>
+        </tr>
+        <tr>
+            <td>2</td><td>Michael</td><td>Flowers</td><td>6/5/1968</td><td>Female</td><td>31</td>
+            <td>zomuk@tumi.sy</td><td>(439) 800-4434</td><td>Esifise</td><td>777</td><td>4</td>
+        </tr>
+        <tr>
+            <td>3</td><td>Rodney</td><td>Farmer</td><td>8/3/1965</td><td>Male</td><td>46</td>
+            <td>zogruklum@lo.sr</td><td>(935) 935-2337</td><td>Utwife</td><td>982</td><td>3</td>
+        </tr>
+        <tr>
+            <td>4</td><td>Ethan</td><td>Moody</td><td>3/24/1982</td><td>Male</td><td>46</td>
+            <td>legip@fuan.tw</td><td>(719) 620-8036</td><td>Nejolaca</td><td>366</td><td>6</td>
+        </tr>
+        <tr>
+            <td>5</td><td>Hattie</td><td>Haynes</td><td>12/15/1992</td><td>Female</td>
+            <td>52</td><td>bowhaduk@palvazi.sk</td><td>(272) 783-8908</td><td>zujigu</td><td>398</td><td>7</td>
+        </tr>
+    </table>
+    <p class="info_table">Only showing top 5 rows.</p>
+</div>
+<div id="school" style="display:none" align="center" class="results">
+<div class="txt">
+    <h1>School Database</h1>
+</div>
+    <p class="info_table">Total no of records = </p>
+    <table   >
+        <tr>
+            <th>school_id</th>
+            <th>school_name</th>
+            <th>school_email</th>
+            <th>school_phone</th>
+            <th>street</th>
+            <th>city</th>
+            <th>state</th>
+            <th>zip_code</th>
         </tr>
           <tr>
         <td>1</td>
@@ -164,18 +197,37 @@
 
     </tr>
 
-</table>
+    </table>
+    <p class="info_table">Only showing top 5 rows.</p>
 </div>
 <div id="maj" style="display:none" align="center" class="results">
-    <h1>major</h1>
+    <div class="txt">
+        <h2>Majors of study Database</h2>
+
+    </div>
+    <p class="info_table">Total no of records = 10 </p>
+    <table>
+        <tr>
+            <th>major_id</th><th>major_name</th><th>course_duration</th>
+        </tr>
+        <tr>
+            <td>1</td><td>computer</td><td>4</td>
+        </tr>
+        <tr>
+            <td>2</td><td>mechanical</td><td>5</td>
+        </tr>
+        <tr>
+            <td>3</td><td>civil</td><td>5</td>
+        </tr>
+        <tr>
+            <td>4</td><td>BA</td><td>3</td>
+        </tr>
+        <tr>
+            <td>5</td><td>MBA</td><td>2</td>
+        </tr>
+    </table>
+    <p class="info_table">Only showing top 5 rows.</p>
 </div>
-
-<table>
-    <tr>
-        <th>stud_id</th><th>first_name</th><th>last_name</th>
-    </tr>
-
-</table>
 
 </body>
 </html>

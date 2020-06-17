@@ -11,15 +11,18 @@
     <script>
 
         function myFunction() {
+            var e = document.getElementById("rtime");
             var x = document.getElementById("planbt");
             var y = document.getElementById("res");
             if (x.style.display === "none") {
                 x.style.display = "block";
                 y.style.display ="none";
+                e.style.display="none";
             } else {
                 x.style.display = "none";
             }
         }
+
         function myFunction1() {
             var x = document.getElementById("res");
             var y = document.getElementById("planbt");
@@ -27,8 +30,31 @@
             var b= document.getElementById("rlp");
             var c= document.getElementById("olp");
             var d =document.getElementById("pp");
+            var e = document.getElementById("rtime");
             if (x.style.display === "none") {
                 x.style.display = "block";
+                y.style.display ="none";
+                a.style.display ="none";
+                b.style.display ="none";
+                c.style.display ="none";
+                d.style.display ="none";
+                e.style.display="none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+        function rtime() {
+            var x = document.getElementById("rtime");
+            var e = document.getElementById("res");
+            var y = document.getElementById("planbt");
+            var a= document.getElementById("ulp");
+            var b= document.getElementById("rlp");
+            var c= document.getElementById("olp");
+            var d =document.getElementById("pp");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                e.style.display="none";
                 y.style.display ="none";
                 a.style.display ="none";
                 b.style.display ="none";
@@ -41,6 +67,7 @@
 
         function ulp() {
             var x = document.getElementById("res");
+            var e = document.getElementById("rtime");
             //var y = document.getElementById("myDIV");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
@@ -50,6 +77,7 @@
                 z.style.display = "block";
                 x.style.display ="none";
                 a.style.display ="none";
+                e.style.display="none";
                 b.style.display ="none";
                 c.style.display ="none";
             } else {
@@ -60,6 +88,7 @@
         function rlp() {
             var x = document.getElementById("res");
             //var y = document.getElementById("myDIV");
+            var e = document.getElementById("rtime");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
             var b =document.getElementById("olp");
@@ -70,6 +99,7 @@
                 b.style.display ="none";
                 c.style.display ="none";
                 z.style.display ="none";
+                e.style.display="none";
             } else {
                 a.style.display = "none";
             }
@@ -77,6 +107,7 @@
         function olp() {
             var x = document.getElementById("res");
             //var y = document.getElementById("myDIV");
+            var e = document.getElementById("rtime");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
             var b =document.getElementById("olp");
@@ -85,6 +116,7 @@
                 b.style.display = "block";
                 z.style.display ="none";
                 a.style.display ="none";
+                e.style.display="none";
                 x.style.display ="none";
                 c.style.display ="none";
             } else {
@@ -93,6 +125,7 @@
         }
         function pp() {
             var x = document.getElementById("res");
+            var e = document.getElementById("rtime");
             //var y = document.getElementById("myDIV");
             var z =document.getElementById("ulp");
             var a =document.getElementById("rlp");
@@ -103,6 +136,7 @@
                 x.style.display ="none";
                 a.style.display ="none";
                 b.style.display ="none";
+                e.style.display="none";
                 z.style.display ="none";
             } else {
                 c.style.display = "none";
@@ -143,6 +177,7 @@
 <button onclick="myFunction1()" align="center" class="btn btn-info buttons">Query Output</button>
 <button onclick="myFunction()" align="center" class="btn btn-info buttons">Semantic Analysis</button>
 <!--<button onclick="redirect()" class="btn btn-info">Submit Another Query</button>-->
+    <button onclick="rtime()" class="btn btn-info buttons">Run Time</button>
     <button onclick="sparkui()" class="btn btn-info buttons">Spark UI</button>
     <button onclick="hui()" class="btn btn-info buttons">Hadoop Application UI</button>
     <button onclick="namenodeui()" class="btn btn-info buttons">Hadoop Namenode UI</button>
@@ -158,7 +193,10 @@
 
 </div>
 
-
+<div id="rtime" align="center" style="display: none">
+    <h2 class="txt">Query Run Time</h2>
+    <pre th:text="${query.time} + ms " style="font-size: medium" class="results"/>
+</div>
     <div id="ulp" style="display: none" align="center" class="results">
         <h2 class="txt"> Unresolved Logical Plan </h2>
         <pre th:text="${query.f1}" style="font-size: medium" class="results"/>
