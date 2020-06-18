@@ -1,18 +1,33 @@
-import org.apache.spark.{SparkConf, SparkContext, sql}
-import org.apache.spark.sql.{SQLContext, SparkSession}
-import org.spark_project.jetty.util.ReadLineInputStream
-object Script2 {
+import org.apache.spark.sql.SQLContext
+import org.apache.spark.{SparkConf, SparkContext}
+
+
+object Script2{
   def main(args: Array[String]): Unit = {
-    val spark=new sql.SparkSession.Builder()
-    val SparkConf = new SparkConf().setAppName("app").setMaster("local[3]")
-    val sc = new SparkContext(SparkConf)
-    val sqlContext = new SQLContext(sc)
-    val df = sqlContext.read.option("header", true).csv("C:\\Users\\Administrator\\Downloads\\student.csv")
-    //val df2 = sqlContext.read.option("header", true).csv("C:\\Users\\Administrator\\Downloads\\school.csv")
-    val df1=df.repartition(df.col("school_id"))
-    val df2=df1.select("school_id", "first_name", "last_name").groupBy(df1.col("school_id")).count().sort(df1.col("school_id"))
-    df2.show()
-    println("Successful Execution")
-    val name=readLine("Please enter a key to stop spark job: ")
+
+    System.setProperty("hadoop.home.dir", "C:\\winutils")
+
+    val conf = new SparkConf().setAppName("Joins").setMaster("local[*]")
+    val sc = new SparkContext(conf)
+    val sqlcontext = new SQLContext(sc)
+
+    val studentdf = sqlcontext.read.option("header", true).csv("hdfs://localhost:9000/student_data.csv")
+    val schooldf = sqlcontext.read.option("header", true).csv("hdfs://localhost:9000/school_data.csv")
+    val majordf = sqlcontext.read.option("header", true).csv("hdfs://localhost:9000/major.csv")
+    /*
+    val join_inner = studentdf.join(schooldf, Seq("school_id"), "inner").join(majordf, Seq("major_id"), "inner")
+    join_inner.show()
+
+
+    val join_fullouter = studentdf.join(schooldf, Seq("school_id"), "fullouter").join(majordf, Seq("major_id"), "fullouter")
+    join_fullouter.show()
+
+    val join_left = studentdf.join(schooldf, Seq("school_id"), "left").join(majordf, Seq("major_id"), "left")
+    join_left.show()*/
+
+
+
+    val name = readLine("Enter name:")
   }
+
 }
