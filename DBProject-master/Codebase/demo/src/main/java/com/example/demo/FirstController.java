@@ -62,10 +62,24 @@ public class FirstController {
         System.out.println(ss.sparkContext().applicationId());
         System.setProperty("Hadoop.home.dir", "C:/Users/Administrator/Downloads/winutils-master/hadoop-2.7.1");
         Scanner sc = new Scanner(System.in);
+        Dataset<Row> lines;
+        Dataset<Row> line1;
+        Dataset<Row> line2;
         // C:\Users\Administrator\Desktop\Project\DB-Project\DBProject-master\Data\student_details.json
-        Dataset<Row> lines = ss.read().option("header", true).csv("hdfs://localhost:9000/major.csv");
-        Dataset<Row> line1 = ss.read().option("header", true).csv("hdfs://localhost:9000/student_data.csv");
-        Dataset<Row> line2 = ss.read().option("header",true).csv("hdfs://localhost:9000/school_data.csv");
+        try {
+            lines = ss.read().option("header", true).csv("hdfs://localhost:9000/major.csv");
+             line1 = ss.read().option("header", true).csv("hdfs://localhost:9000/student_data.csv");
+             line2 = ss.read().option("header", true).csv("hdfs://localhost:9000/school_data.csv");
+        }
+        catch(Exception e)
+        {
+
+            System.out.println("innn");
+             lines = ss.read().option("header", true).csv("major.csv");
+             line1 = ss.read().option("header", true).csv("student_data.csv");
+             line2 = ss.read().option("header",true).csv("school_data.csv");
+
+        }
 
         lines.createOrReplaceTempView("major");
         line1.createOrReplaceTempView("student");
@@ -128,7 +142,21 @@ public class FirstController {
             String t1="Filters\n" +
                     "1. Always filter your data before applying any complex operations. This reduces the amount of data to be operated upon!\n" +
                     "2. It is a good practice to write filters first, although the Catalyst optimizer ensures that filters are executed before any operations. These are called pushdown filters!\n" +
-                    "3. Always try to club filter functions together instead of writing consecutive filters. This saves a step for the Catalyst optimizer!";
+                    "3. Always try to club filter functions together instead of writing consecutive filters. This saves a step for the Catalyst optimizer!\n" +
+                    "4. Filter pushdown aims at pushing down the filtering to the bare metal, i.e. the data source. This increases the performance of the queries sice the filtering is performed at a very low level rather than dealing with the entire dataset after it has been loaded into Spark's memory which could cause memory issues!\n" +
+                    "5. Somtimes filter operation may cut down on a significant amount of data. However, this does not change the number of partitions and it might even result in some empty partitions. You can call repartition or coalesce to spread the data on an appropriate number of memory partitions!\n" +
+                    "6. Filtering operation also depends on the underlying datastore. A parquet datastore will only send the required columns to the cluster as a part of column pruning and perform filtering on the cluster. On the other hand, a CSV datastore will send the entire ddataset to the cluster as it is a row based file format and doesn't support column pruning!\n" +
+                    "7. If you are transferring data from an external source like cloud into the cluster then you might want to perform filtering on the cloud itself as it will lead to a smaller cluster size requirment which can lead to a significant cost reduction!\n" +
+                    "8. If you have a very specific filter operation that results in only a fraction of the data being selected, you might want to repartition the data and write it on the disk. Spark then only takes data from certain partitions and skips all of the irrelevant partitions. These are called ParitionFilters. Data skipping allows for a big performance boost!\n";
+            query.setTips(query.getTips()+t1);
+        }
+        if(submitted_query.contains("select")||submitted_query.contains("SELECT"))
+        {
+            String t1="General\n" +
+                    "1. Making simple changes to the system parameters might also improve the peformance of SparkSQL statements!\n" +
+                    "2. You can set sparl.sql.codegen parameter to true as it compiles and creates java bytecode quickly for large queries but it may lag in case of small queries!\n" +
+                    "3. If you have small interim tables that are used repeatedly, caching them and the performing more complex opeartions can result in a performance boost!\n" +
+                    "4. Caching all the generated tables is not a good idea as cache memory is limited and may lead to the eviction of some blocks that are expensive to compute!";
             query.setTips(query.getTips()+t1);
         }
          //sqldf.write().format("com.databricks.spark.csv").saveAsTable("t1");

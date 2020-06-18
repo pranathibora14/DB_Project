@@ -1,4 +1,4 @@
 == Physical Plan ==
-*Project [stud_id#155, first_name#156, last_name#157, birthday#158, gender#159, age#160, stud_email#161, stud_phone#162, stud_address#163, school_id#164, major_id#165]
-+- *Filter (isnotnull(stud_id#155) && (cast(stud_id#155 as double) > 1000.0))
-   +- *Scan csv [stud_id#155,first_name#156,last_name#157,birthday#158,gender#159,age#160,stud_email#161,stud_phone#162,stud_address#163,school_id#164,major_id#165] Format: CSV, InputPaths: hdfs://localhost:9000/student_data.csv, PushedFilters: [IsNotNull(stud_id)], ReadSchema: struct<stud_id:string,first_name:string,last_name:string,birthday:string,gender:string,age:string...
+*Project [stud_id#105, first_name#106, last_name#107, birthday#108, gender#109, age#110, stud_email#111, stud_phone#112, stud_address#113, school_id#114, major_id#115]
++- *Filter (isnotnull(stud_id#105) && (cast(stud_id#105 as double) < 10.0))
+   +- *Scan csv [stud_id#105,first_name#106,last_name#107,birthday#108,gender#109,age#110,stud_email#111,stud_phone#112,stud_address#113,school_id#114,major_id#115] Format: CSV, InputPaths: hdfs://localhost:9000/student_data.csv, PushedFilters: [IsNotNull(stud_id)], ReadSchema: struct<stud_id:string,first_name:string,last_name:string,birthday:string,gender:string,age:string...

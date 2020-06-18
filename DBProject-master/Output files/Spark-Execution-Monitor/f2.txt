@@ -1,6 +1,6 @@
 == Analyzed Logical Plan ==
 stud_id: string, first_name: string, last_name: string, birthday: string, gender: string, age: string, stud_email: string, stud_phone: string, stud_address: string, school_id: string, major_id: string
-Project [stud_id#155, first_name#156, last_name#157, birthday#158, gender#159, age#160, stud_email#161, stud_phone#162, stud_address#163, school_id#164, major_id#165]
-+- Filter (cast(stud_id#155 as double) > cast(1000 as double))
+Project [stud_id#105, first_name#106, last_name#107, birthday#108, gender#109, age#110, stud_email#111, stud_phone#112, stud_address#113, school_id#114, major_id#115]
++- Filter (cast(stud_id#105 as double) < cast(10 as double))
    +- SubqueryAlias student
-      +- Relation[stud_id#155,first_name#156,last_name#157,birthday#158,gender#159,age#160,stud_email#161,stud_phone#162,stud_address#163,school_id#164,major_id#165] csv
+      +- Relation[stud_id#105,first_name#106,last_name#107,birthday#108,gender#109,age#110,stud_email#111,stud_phone#112,stud_address#113,school_id#114,major_id#115] csv

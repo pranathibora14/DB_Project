@@ -1,4 +1,4 @@
 == Parsed Logical Plan ==
 'Project [*]
-+- 'Filter ('stud_id > 1000)
++- 'Filter ('stud_id < 10)
    +- 'UnresolvedRelation `student`

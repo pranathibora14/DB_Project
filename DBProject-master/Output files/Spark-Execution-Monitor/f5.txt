@@ -1,25 +1,13 @@
-+-------+----------+----------+----------+------+---+--------------------+--------------+------------+---------+--------+
-|stud_id|first_name| last_name|  birthday|gender|age|          stud_email|    stud_phone|stud_address|school_id|major_id|
-+-------+----------+----------+----------+------+---+--------------------+--------------+------------+---------+--------+
-|   1001|    Howard|    Carson| 12/5/1993|Female| 30|          mari@tu.fk|(967) 649-2524|    Gunowate|      140|       9|
-|   1002|  Margaret|  Gonzalez| 10/3/1966|  Male| 41|           bo@rom.bg|(354) 661-7565|    Jeveswop|      224|       2|
-|   1003|     Caleb|  Roberson| 2/18/1986|Female| 58|      hacit@dedol.td|(980) 415-4534|    Roipoabo|      109|       9|
-|   1004|     Lelia|    Cannon| 3/11/1976|Female| 48|        nitpov@aj.nc|(940) 868-3939|    Huvsimsa|      498|       3|
-|   1005|      Jeff|   Sherman| 12/8/1999|Female| 35|    mana@bejummol.ca|(936) 759-9664|     Pucappo|      364|       2|
-|   1006|    Curtis|   Mendoza| 9/21/1971|Female| 54|         team@tik.dm|(714) 234-5449|    Peflujsu|      782|       3|
-|   1007|   Gregory|   Osborne|11/22/1955|Female| 56|   gajunfo@dapoed.pe|(942) 656-8695|    Korjelaf|      187|       4|
-|   1008|    Elnora|      Cain|10/14/1972|Female| 58|    idukec@menhuh.et|(808) 625-5121|   Vuwhehwud|      713|       1|
-|   1009|   Cecelia|     Green|11/16/1963|  Male| 43|      neiref@nat.edu|(371) 447-1488|     Jawarov|      372|       1|
-|   1010| Nathaniel|Williamson|12/23/2002|  Male| 64|    lozcoizi@hout.ec|(439) 811-8977|   Zutcemeri|      240|       2|
-|   1011|     Mason|    Gordon| 10/5/1965|Female| 65|   inoku@jefugebe.wf|(988) 468-8969|      Vihawi|      780|       4|
-|   1012|    Jennie|   Walters|  5/5/1989|  Male| 34|     isti@jaziwka.ar|(919) 601-9563|   Cingufwiz|      467|       4|
-|   1013|    Minnie|    Haynes|  8/1/2000|  Male| 33|       ece@taveos.th|(556) 437-4494|   Nadesefib|      273|       9|
-|   1014|     Hilda|     Young| 11/3/1980|Female| 61|   cuunoop@gasooh.gi|(752) 860-3697|     Kinigma|      570|       4|
-|   1015|    Herman|    Mendez| 7/11/1970|  Male| 64|  ivsabi@mowlahef.tw|(615) 830-6760|     Zovpipu|      482|       9|
-|   1016|     Tyler|   Maxwell|  7/9/1999|  Male| 23|         waub@gec.sh|(611) 368-7171|     Piihado|      614|       7|
-|   1017|      Gary|  McDonald| 6/15/1970|  Male| 34|          uta@kis.ht|(682) 863-9931|     Hilufuw|      200|       1|
-|   1018|  Cornelia|     Wells|12/11/1978|  Male| 31|        na@kezeum.al|(285) 456-8557|    Ibuusipa|      906|       0|
-|   1019|     Lloyd|      Hill|  4/8/1993|Female| 22|  raicpev@zazfiij.lr|(486) 254-4940|   Sadturfuf|      649|       0|
-|   1020|       Ora|     Bryan| 11/5/1976|Female| 64|leepufob@fincosru.cg|(458) 785-7193|    Nitufosi|      038|       4|
-+-------+----------+----------+----------+------+---+--------------------+--------------+------------+---------+--------+
-only showing top 20 rows
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
+|stud_id|first_name|last_name|  birthday|gender|age|         stud_email|    stud_phone|stud_address|school_id|major_id|
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
+|      1|     Ellen|    Greer| 3/30/1993|Female| 37|    finrikan@jal.eh|(508) 331-2026|    Muomawur|      741|       6|
+|      2|   Michael|  Flowers|  6/5/1968|Female| 31|      zomuk@tumi.sy|(439) 800-4434|     Esifise|      777|       4|
+|      3|    Rodney|   Farmer|  8/3/1965|  Male| 46|    zogruklum@lo.sr|(935) 935-2337|      Utwife|      982|       3|
+|      4|     Ethan|    Moody| 3/24/1982|  Male| 46|      legip@fuon.tw|(719) 620-8036|    Nejolaca|      366|       6|
+|      5|    Hattie|   Haynes|12/15/1992|Female| 52|bowhaduk@palvazi.sk|(272) 783-8908|      Zujigu|      398|       7|
+|      6|   Lucinda|     Ross| 1/24/1968|Female| 56|      ruodza@uja.mz|(783) 536-6898|   Pefujutaw|      782|       3|
+|      7|    Tillie|     Huff|10/14/1990|Female| 20|    pufat@jajeji.do|(868) 313-5930|    Daforovu|      049|       0|
+|      8|    Arthur|      Lee|11/25/1988|Female| 62|          iga@nu.vc|(407) 897-3898|    Udiwemiz|      994|       7|
+|      9|   Blanche|  Summers| 2/18/1960|Female| 54|    adoego@bijij.bt|(623) 538-6510|    Anocowof|      303|       9|
++-------+----------+---------+----------+------+---+-------------------+--------------+------------+---------+--------+
