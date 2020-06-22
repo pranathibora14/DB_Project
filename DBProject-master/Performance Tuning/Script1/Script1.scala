@@ -11,7 +11,7 @@ object Script1{
     val df=sqlContext.read.option("header", true).csv("C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Data\\student_data.csv")
     val df2=sqlContext.read.option("header", true).csv("C:\\Users\\Administrator\\Desktop\\Project\\DBProject-master\\Data\\school_data.csv")
     val outer_df = df.join(df2, Seq("school_id"), "full_outer").distinct()
-    println("Total number of distinct schools are: "+ outer_df.count())
+    println("Total number of distinct records are: "+ outer_df.count())
     println("Successful Execution")
     val name=readLine("Please enter a key to stop spark job: ")
   }
