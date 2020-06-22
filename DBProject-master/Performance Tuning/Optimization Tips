@@ -1,0 +1,42 @@
+General strategies for optimization of Spark SQL queries:
+Joins
+1. Join is one of the costliest operations in Spark. You can get rid of duplicate keys in order to shrink the data size and make join operations much faster!
+2. If you have a defined subset of keys that you are going to use after joining, it may be a good idea to filter out and reduce the rows avoiding a big shuffle of data. This can save time since you will ultimately throw out the redundant data anyway!
+3. In operations consisiting of sensitive data, if you are not sure whether there are matching keys in both tables, it can be safer to use an outer join since no data wil be lost!
+4. BroadcastHashJoin is an effective join strategy when one of the tables is much smaller (<10MB) than the other. You can forcibly induce a BroadcastHashJoin by giving hints or setting the autoBroadcastJoinThreshold to the table size!
+5. You can induce a BroadcastHashJoin by using the broadcast() function!
+6. You can change the threshold value for the table size by setting autoBroadcastJoinThreshold to the desired size. Setting this parameter to -1 will disable BroadcastHashJoin, making SortMergeJoin the default!
+7. SortMergeJoin is an effective join strategy when both tables are of comparable sizes.
+8. You can forcibly induce a SortMergeJoin by setting the autoBroadcastJoinThreshold to -1!
+9. You can disable SortMergeJoins by setting the preferSortMergeJoin parameter to false!
+10. Joining more than two tables in Spark can be tricky. SortMergeJoin seems to give better runtime performance in this case!
+11. Ensuring that the dataframe is distributed uniformly on the data column helps to leverage parallelism as all the rows having the same value for the join key are stored in the same partition. Therefore, the dataframe having an adequate number of unique keys can boost performance! 
+
+GroupBy
+1. GroupBy queries can be improved by tuning the number of partitions. It can lead to a significant performance improvement since it is a costly operation!
+2. The default number of partitions for aggregations is 200 in Spark. Try tuning this value to get an improved performance!
+3. If you have less distinct keys, then you can try repartitioning the data to less than 200 partitions. This can boost performance provided that the data for a key fits in one partition!
+4. You can repartition the data on a column value if you are planning on performing multiple complex aggregation functions and joins on the same column. This leads to lesser shuffles of data as the data is already shuffled on the required key!
+5. You can also use repartition along with an expression to be performed like groupBy. The data gets shuffled accoring to the groupBy expression!
+6. If you don't want to use the repartition function, you can also set the SHUFFLE_PARTITIONS property to the desired number of partitions!
+7. GroupBy with RDDs is not optimized. If you're using groupBy with DataFrames you're pretty much good to go!
+
+OrderBy
+1. You can also sort data locally in partitions by using the sortWithinPartitions() method!
+2. With a large enough dataset, we can make sort merge joins faster by repartitioning the data on the join key and then calling sortWithinPartitions on the dataframe!
+
+Filters
+1. Always filter your data before applying any complex operations. This reduces the amount of data to be operated upon!
+2. It is a good practice to write filters first, although the Catalyst optimizer ensures that filters are executed before any operations. These are called pushdown filters!
+3. Always try to club filter functions together instead of writing consecutive filters. This saves a step for the Catalyst optimizer!
+4. Filter pushdown aims at pushing down the filtering to the bare metal, i.e. the data source. This increases the performance of the queries sice the filtering is performed at a very low level rather than dealing with the entire dataset after it has been loaded into Spark's memory which could cause memory issues!
+5. Somtimes filter operation may cut down on a significant amount of data. However, this does not change the number of partitions and it might even result in some empty partitions. You can call repartition or coalesce to spread the data on an appropriate number of memory partitions!
+6. Filtering operation also depends on the underlying datastore. A parquet datastore will only send the required columns to the cluster as a part of column pruning and perform filtering on the cluster. On the other hand, a CSV datastore will send the entire ddataset to the cluster as it is a row based file format and doesn't support column pruning!
+7. If you are transferring data from an external source like cloud into the cluster then you might want to perform filtering on the cloud itself as it will lead to a smaller cluster size requirment which can lead to a significant cost reduction!
+8. If you have a very specific filter operation that results in only a fraction of the data being selected, you might want to repartition the data and write it on the disk. Spark then only takes data from certain partitions and skips all of the irrelevant partitions. These are called ParitionFilters. Data skipping allows for a big performance boost!
+
+General
+1. Making simple changes to the system parameters might also improve the peformance of SparkSQL statements!
+2. You can set sparl.sql.codegen parameter to true as it compiles and creates java bytecode quickly for large queries but it may lag in case of small queries!
+3. If you have small interim tables that are used repeatedly, caching them and the performing more complex opeartions can result in a performance boost!
+4. Caching all the generated tables is not a good idea as cache memory is limited and may lead to the eviction of some blocks that are expensive to compute!
