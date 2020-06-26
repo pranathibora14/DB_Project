@@ -1,2 +1,4 @@
 == Optimized Logical Plan ==
-Relation[stud_id#7,first_name#8,last_name#9,birthday#10,gender#11,age#12,stud_email#13,stud_phone#14,stud_address#15,school_id#16,major_id#17] csv
+Aggregate [major_id#192], [major_id#192, count(first_name#183) AS count(first_name)#234L]
++- Project [first_name#183, major_id#192]
+   +- Relation[stud_id#182,first_name#183,last_name#184,birthday#185,gender#186,age#187,stud_email#188,stud_phone#189,stud_address#190,school_id#191,major_id#192] csv
