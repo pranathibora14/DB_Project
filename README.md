@@ -40,6 +40,9 @@ Software Testing is an important phase of Software Development. In order to get 
 
 ## Performance Tuning
 The problem statement as mentioned is the semantic analysis of Spark SQL statements for a better run time performance. Over the course of the project, we have compiled a list of optimization strategies that can imporove performance of expensive operations like *Joins, GroupBy, OrderBy* as well as some general optimization tips. These strategies have been included in the Web UI and will be visible when the user enters a related query. For example, if a user enters a query to perform a join, the optimizations tab in the UI provides a list of strategies for joins. Spark deals with a huge volume of data because of which even seemingly simple operations like groupbys can take a significant amount of time. Therefore, optimizations become an important part in cutting down the time required. We have also documented this in Script1 where a job that takes over 6 minutes can be cut down to less than 2 minutes using performance tuning strategies.  
+
+## Demo
+[Demo](DBProject-master/Project%20UI/Project%20UI.pdf)
 ## Authors
 - [Shivani Patil](https://www.linkedin.com/in/shivani-patil209/)
 - [Shivani Mundle](https://www.linkedin.com/in/shivani-m-89275b190/)
